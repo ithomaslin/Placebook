@@ -21,6 +21,19 @@
 		C4AFE114182508520003135A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE0F6182508520003135A /* UIKit.framework */; };
 		C4AFE11C182508520003135A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AFE11A182508520003135A /* InfoPlist.strings */; };
 		C4AFE11E182508520003135A /* PlacebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE11D182508520003135A /* PlacebookTests.m */; };
+		C4AFE128182508B10003135A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE127182508B10003135A /* CoreImage.framework */; };
+		C4AFE12A182508B90003135A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE129182508B90003135A /* QuartzCore.framework */; };
+		C4AFE12C182508C00003135A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE12B182508C00003135A /* MapKit.framework */; };
+		C4AFE13018250A860003135A /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE12F18250A860003135A /* Annotation.m */; };
+		C4AFE13118250A860003135A /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE12F18250A860003135A /* Annotation.m */; };
+		C4AFE13918250AE90003135A /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13518250AE90003135A /* DataLoader.m */; };
+		C4AFE13A18250AE90003135A /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13518250AE90003135A /* DataLoader.m */; };
+		C4AFE13B18250AE90003135A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13818250AE90003135A /* Model.m */; };
+		C4AFE13C18250AE90003135A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13818250AE90003135A /* Model.m */; };
+		C4AFE13F18250B810003135A /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AFE13E18250B810003135A /* Locations.plist */; };
+		C4AFE14018250B810003135A /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AFE13E18250B810003135A /* Locations.plist */; };
+		C4AFE14518251DC60003135A /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */; };
+		C4AFE14618251DC60003135A /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +66,18 @@
 		C4AFE119182508520003135A /* PlacebookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlacebookTests-Info.plist"; sourceTree = "<group>"; };
 		C4AFE11B182508520003135A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4AFE11D182508520003135A /* PlacebookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacebookTests.m; sourceTree = "<group>"; };
+		C4AFE127182508B10003135A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		C4AFE129182508B90003135A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C4AFE12B182508C00003135A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C4AFE12E18250A860003135A /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		C4AFE12F18250A860003135A /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		C4AFE13418250AE90003135A /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
+		C4AFE13518250AE90003135A /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
+		C4AFE13718250AE90003135A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		C4AFE13818250AE90003135A /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		C4AFE13E18250B810003135A /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		C4AFE14318251DC60003135A /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
+		C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AFE12C182508C00003135A /* MapKit.framework in Frameworks */,
+				C4AFE12A182508B90003135A /* QuartzCore.framework in Frameworks */,
+				C4AFE128182508B10003135A /* CoreImage.framework in Frameworks */,
 				C4AFE0F5182508520003135A /* CoreGraphics.framework in Frameworks */,
 				C4AFE0F7182508520003135A /* UIKit.framework in Frameworks */,
 				C4AFE0F3182508520003135A /* Foundation.framework in Frameworks */,
@@ -101,6 +129,9 @@
 		C4AFE0F1182508520003135A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4AFE12B182508C00003135A /* MapKit.framework */,
+				C4AFE129182508B90003135A /* QuartzCore.framework */,
+				C4AFE127182508B10003135A /* CoreImage.framework */,
 				C4AFE0F2182508520003135A /* Foundation.framework */,
 				C4AFE0F4182508520003135A /* CoreGraphics.framework */,
 				C4AFE0F6182508520003135A /* UIKit.framework */,
@@ -112,9 +143,13 @@
 		C4AFE0F8182508520003135A /* Placebook */ = {
 			isa = PBXGroup;
 			children = (
+				C4AFE13218250AE90003135A /* Repository */,
+				C4AFE12D18250A860003135A /* Annotation */,
 				C4AFE101182508520003135A /* AppDelegate.h */,
 				C4AFE102182508520003135A /* AppDelegate.m */,
 				C4AFE104182508520003135A /* Main.storyboard */,
+				C4AFE14318251DC60003135A /* WildcardGestureRecognizer.h */,
+				C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */,
 				C4AFE107182508520003135A /* ViewController.h */,
 				C4AFE108182508520003135A /* ViewController.m */,
 				C4AFE10A182508520003135A /* Images.xcassets */,
@@ -126,6 +161,7 @@
 		C4AFE0F9182508520003135A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4AFE13D18250B810003135A /* Data */,
 				C4AFE0FA182508520003135A /* Placebook-Info.plist */,
 				C4AFE0FB182508520003135A /* InfoPlist.strings */,
 				C4AFE0FE182508520003135A /* main.m */,
@@ -150,6 +186,50 @@
 				C4AFE11A182508520003135A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4AFE12D18250A860003135A /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFE12E18250A860003135A /* Annotation.h */,
+				C4AFE12F18250A860003135A /* Annotation.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		C4AFE13218250AE90003135A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFE13318250AE90003135A /* DataLoader */,
+				C4AFE13618250AE90003135A /* Model */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C4AFE13318250AE90003135A /* DataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFE13418250AE90003135A /* DataLoader.h */,
+				C4AFE13518250AE90003135A /* DataLoader.m */,
+			);
+			path = DataLoader;
+			sourceTree = "<group>";
+		};
+		C4AFE13618250AE90003135A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFE13718250AE90003135A /* Model.h */,
+				C4AFE13818250AE90003135A /* Model.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4AFE13D18250B810003135A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFE13E18250B810003135A /* Locations.plist */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AFE10B182508520003135A /* Images.xcassets in Resources */,
+				C4AFE13F18250B810003135A /* Locations.plist in Resources */,
 				C4AFE0FD182508520003135A /* InfoPlist.strings in Resources */,
 				C4AFE106182508520003135A /* Main.storyboard in Resources */,
 			);
@@ -239,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AFE11C182508520003135A /* InfoPlist.strings in Resources */,
+				C4AFE14018250B810003135A /* Locations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +332,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AFE109182508520003135A /* ViewController.m in Sources */,
+				C4AFE14518251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
 				C4AFE103182508520003135A /* AppDelegate.m in Sources */,
+				C4AFE13018250A860003135A /* Annotation.m in Sources */,
+				C4AFE13B18250AE90003135A /* Model.m in Sources */,
 				C4AFE0FF182508520003135A /* main.m in Sources */,
+				C4AFE13918250AE90003135A /* DataLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AFE13118250A860003135A /* Annotation.m in Sources */,
 				C4AFE11E182508520003135A /* PlacebookTests.m in Sources */,
+				C4AFE14618251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
+				C4AFE13A18250AE90003135A /* DataLoader.m in Sources */,
+				C4AFE13C18250AE90003135A /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +550,7 @@
 				C4AFE123182508520003135A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4AFE124182508520003135A /* Build configuration list for PBXNativeTarget "PlacebookTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +559,7 @@
 				C4AFE126182508520003135A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

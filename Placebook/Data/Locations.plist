@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>The Evolution Of Mobile Apps</string>
+		<key>location</key>
+		<string>Alan Cannistraro</string>
+		<key>cover</key>
+		<string>alan</string>
+		<key>date</key>
+		<date>2013-09-02T23:49:43Z</date>
+		<key>value</key>
+		<integer>30</integer>
+		<key>type</key>
+		<string>concert</string>
+		<key>latitude</key>
+		<string>52.0333</string>
+		<key>longitude</key>
+		<string>-0.126</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Exploring MVC-N</string>
+		<key>location</key>
+		<string>Marcus Zarra</string>
+		<key>cover</key>
+		<string>zarra</string>
+		<key>date</key>
+		<date>2013-09-04T11:39:22Z</date>
+		<key>value</key>
+		<integer>23</integer>
+		<key>type</key>
+		<string>talk</string>
+		<key>latitude</key>
+		<string>52.0333</string>
+		<key>longitude</key>
+		<string>-0.7</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>iOS Dev : A Year in Review</string>
+		<key>location</key>
+		<string>Dave Verwer</string>
+		<key>cover</key>
+		<string>dave</string>
+		<key>date</key>
+		<date>2013-09-03T23:50:06Z</date>
+		<key>value</key>
+		<integer>15</integer>
+		<key>type</key>
+		<string>concert</string>
+		<key>latitude</key>
+		<string>51.5000</string>
+		<key>longitude</key>
+		<string>-0.34</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>The Little Ideas</string>
+		<key>location</key>
+		<string>Dave Addey</string>
+		<key>cover</key>
+		<string>dave-addey</string>
+		<key>date</key>
+		<date>2013-09-03T23:50:06Z</date>
+		<key>value</key>
+		<integer>15</integer>
+		<key>type</key>
+		<string>concert</string>
+		<key>latitude</key>
+		<string>51.5000</string>
+		<key>longitude</key>
+		<string>-0.34</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Git for iOS Developers</string>
+		<key>location</key>
+		<string>Simon Whitaker</string>
+		<key>cover</key>
+		<string>simon</string>
+		<key>date</key>
+		<date>2013-09-03T23:50:06Z</date>
+		<key>value</key>
+		<integer>15</integer>
+		<key>type</key>
+		<string>concert</string>
+		<key>latitude</key>
+		<string>51.5000</string>
+		<key>longitude</key>
+		<string>-0.34</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Obj C : Digging the Foundations</string>
+		<key>location</key>
+		<string>Matt Galloway</string>
+		<key>cover</key>
+		<string>matt</string>
+		<key>date</key>
+		<date>2013-09-03T23:50:06Z</date>
+		<key>value</key>
+		<integer>15</integer>
+		<key>type</key>
+		<string>concert</string>
+		<key>latitude</key>
+		<string>51.5000</string>
+		<key>longitude</key>
+		<string>-0.34</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Alternative Reality With GPU Image</string>
+		<key>location</key>
+		<string>Fernando Rodriguez</string>
+		<key>cover</key>
+		<string>rodriguez</string>
+		<key>date</key>
+		<date>2013-04-18T23:49:12Z</date>
+		<key>value</key>
+		<integer>20</integer>
+		<key>type</key>
+		<string>concert</string>
+		<key>latitude</key>
+		<string>51.500</string>
+		<key>longitude</key>
+		<string>-0.126</string>
+	</dict>
+</array>
+</plist>
