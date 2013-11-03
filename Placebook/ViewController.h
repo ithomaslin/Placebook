@@ -29,5 +29,7 @@
 - (IBAction)locate:(id)sender;
 - (IBAction)camLaunch:(id)sender;
 
+- (IBAction)refreshMap;
+
 
 @end
