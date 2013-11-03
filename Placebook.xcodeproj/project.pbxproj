@@ -38,6 +38,9 @@
 		28AF89CD1826728000546DE8 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AF89A91826728000546DE8 /* UIImage+WebP.m */; };
 		28AF89CE1826728000546DE8 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AF89AB1826728000546DE8 /* UIImageView+WebCache.m */; };
 		28AF89CF1826728000546DE8 /* SDWebImage.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 28AF89AC1826728000546DE8 /* SDWebImage.podspec */; };
+		28AF89DD182673BC00546DE8 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AF89D81826728000546DE8 /* libSDWebImage.a */; };
+		28AF89DE182673BC00546DE8 /* libSDWebImage+MKAnnotation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AF89DC1826728000546DE8 /* libSDWebImage+MKAnnotation.a */; };
+		28AF89DF182673BC00546DE8 /* libSDWebImage+WebP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AF89DA1826728000546DE8 /* libSDWebImage+WebP.a */; };
 		28BC6ADF1826108100ACBFBC /* PBServerConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6ADE1826108100ACBFBC /* PBServerConnector.m */; };
 		28BC6AE218261DC200ACBFBC /* SKCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6AE118261DC200ACBFBC /* SKCluster.m */; };
 		C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */; };
@@ -224,6 +227,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28AF89DD182673BC00546DE8 /* libSDWebImage.a in Frameworks */,
+				28AF89DE182673BC00546DE8 /* libSDWebImage+MKAnnotation.a in Frameworks */,
+				28AF89DF182673BC00546DE8 /* libSDWebImage+WebP.a in Frameworks */,
 				C40D67E218261F2100CF0CCD /* ImageIO.framework in Frameworks */,
 				C40D67E018261F1700CF0CCD /* AVFoundation.framework in Frameworks */,
 				C4AFE12C182508C00003135A /* MapKit.framework in Frameworks */,
@@ -904,6 +910,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Placebook/Placebook-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/Shaun/placebook/Placebook/SDWebImage/SDWebImage,
+				);
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -918,6 +929,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Placebook/Placebook-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/Shaun/placebook/Placebook/SDWebImage/SDWebImage,
+				);
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
