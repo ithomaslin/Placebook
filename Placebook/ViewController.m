@@ -16,6 +16,7 @@
 #import "WhatsHotViewController.h"
 #import "PBServerConnector.h"
 #import "SKCluster.h"
+#import "SKMapAnnotation.h"
 
 @interface ViewController () <WhatsHotViewControllerDelegate>
 {
@@ -49,7 +50,7 @@
     [_hotBtn.layer setShadowOffset:CGSizeMake(0, 0)];
     [_hotBtn setBackgroundColor:[UIColor clearColor]];
     
-//    self.mapView.delegate = self;
+    self.mapView.delegate = self;
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
@@ -85,35 +86,56 @@
     
 }
 
+//- (MKAnnotationView *)mapView:(MKMapView *)mapview viewForAnnotation:(id <MKAnnotation>)annotation
+//{
+////    if ([annotation isKindOfClass:[MKUserLocation class]])
+////        return nil;
+//    
+//    static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
+//    MKAnnotationView *annotationView = [_mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
+//    if(annotationView)
+//        return annotationView;
+//    else
+//    {
+//        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+//        annotationView.canShowCallout = YES;
+//        if ([annotation isKindOfClass:[Annotation class]]) {
+//            annotationView.image = [UIImage imageNamed:@"self.png"];
+//        } else {
+//            annotationView.image = [UIImage imageNamed:@"tab-item-nearby.png"];
+////            annotationView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:@"NSData"]];
+//            //Set pic on the annotation...
+//        }
+//        [annotationView.layer setShadowColor:[UIColor blackColor].CGColor];
+//        [annotationView.layer setShadowOpacity:1.0f];
+//        [annotationView.layer setShadowRadius:5.0f];
+//        [annotationView.layer setShadowOffset:CGSizeMake(0, 0)];
+//        [annotationView setBackgroundColor:[UIColor clearColor]];
+//        
+//        return annotationView;
+//    }
+//    return nil;
+//}
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapview viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    if ([annotation isKindOfClass:[MKUserLocation class]])
-        return nil;
+    MKAnnotationView* aView;
     
-    static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
-    MKAnnotationView *annotationView = [_mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
-    if(annotationView && NO)
-        return annotationView;
-    else
-    {
-        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
-        annotationView.canShowCallout = YES;
-        if ([annotation isKindOfClass:[Annotation class]]) {
-            annotationView.image = [UIImage imageNamed:@"self.png"];
-        } else {
-            annotationView.image = [UIImage imageNamed:@"tab-item-nearby.png"];
-//            annotationView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:@"NSData"]];
-            //Set pic on the annotation...
-        }
-        [annotationView.layer setShadowColor:[UIColor blackColor].CGColor];
-        [annotationView.layer setShadowOpacity:1.0f];
-        [annotationView.layer setShadowRadius:5.0f];
-        [annotationView.layer setShadowOffset:CGSizeMake(0, 0)];
-        [annotationView setBackgroundColor:[UIColor clearColor]];
-        
-        return annotationView;
+    if ([annotation isKindOfClass:[Annotation class]]) {
+        aView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                reuseIdentifier:@"MyCustomAnnotation"];
+        aView.centerOffset = CGPointMake(10, -20);
+        aView.image = [UIImage imageNamed:@"self.png"];
+    } else {
+        SKMapAnnotation *anotherView = [[SKMapAnnotation alloc] initWithAnnotation:annotation
+                                             reuseIdentifier:@"OtherCustomAnnotation"];
+        anotherView.cluster = (SKCluster *)annotation;
+        [anotherView setNeedsDisplay];
+        aView = anotherView;
     }
-    return nil;
+
+    
+    return aView;
 }
 
 - (void)refreshMap
@@ -123,8 +145,12 @@
     CLLocationCoordinate2D southEastCorner = [self.mapView convertPoint:CGPointMake(CGRectGetMaxX(self.mapView.frame), CGRectGetMaxY(self.mapView.frame)) toCoordinateFromView:_mapView];
     
     [PBServerConnector makeRequestForRegion:northWestCorner to:southEastCorner onCompletion:^(NSArray *clusters) {
-
-        [self.mapView removeAnnotations:self.mapView.annotations];
+        
+        NSArray *annotations = [_mapView.annotations copy];
+        for (id<MKAnnotation> annotation in annotations) {
+            if (![annotation isKindOfClass:[Annotation class]])
+                [self.mapView removeAnnotation:annotation];
+        }
         // Add all those to the map
         for (SKCluster *cluster in clusters)
             [self.mapView addAnnotation:cluster];
