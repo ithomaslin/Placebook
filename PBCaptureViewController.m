@@ -18,6 +18,9 @@
     BOOL __newBubble;
     NSInteger __chosenBubble;
 
+    CALayer *__videoPreviewLayer;
+    UIButton *__closeButton;
+
     // Temporary image data
     CLLocationDegrees __imageLatitude;
     CLLocationDegrees __imageLongitude;
@@ -105,6 +108,8 @@
     UIImageView *closeImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"close.png"]];
     closeImg.frame = CGRectMake(14, 14, closeImg.frame.size.width, closeImg.frame.size.height);
     [closeButton addSubview:closeImg];
+
+    __closeButton = closeButton;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -192,13 +197,13 @@
 
 - (CALayer *)createVideoPreviewLayerInView: (UIView *)view;
 {
-    CALayer *videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
-    videoPreviewLayer.frame = self.view.frame;
+    __videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
+    __videoPreviewLayer.frame = self.view.frame;
 
-    [view.layer addSublayer:videoPreviewLayer];
+    [view.layer addSublayer:__videoPreviewLayer];
     [view setNeedsDisplay];
 
-    return videoPreviewLayer;
+    return __videoPreviewLayer;
 }
 
 - (void)captureStillImage
@@ -243,9 +248,18 @@
 
     NSLog(@"Capturing lat=%f lng=%f", __imageLatitude, __imageLongitude);
 
+
+    [__captureButton removeFromSuperview];
+
     // Remove all subviews (e.g. the avcapture preview and the button).
-    [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    [self stopCaptureSession];
+//    [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//    [self stopCaptureSession];
+
+    UIView *overlayView = [[UIView alloc] initWithFrame:self.view.frame];
+    [overlayView.layer setBackgroundColor:[[UIColor colorWithWhite:255.0f alpha:0.5f] CGColor]];
+    [self.view insertSubview:overlayView belowSubview:__closeButton];
+
+    [self.captureSession startRunning];
 
     // Fill the window with the captured image.
     UIImage *image = [[UIImage alloc] initWithData:jpegData];
@@ -281,6 +295,8 @@
         thumbView.layer.shadowOpacity = 0.9f;
         thumbView.layer.shadowRadius = 3.0f;
         thumbView.layer.masksToBounds = YES;
+
+        [overlayView setAlpha:1.0f];
 
         [self showMoodBubbles];
         [self.view addSubview:thumbView];
@@ -329,7 +345,22 @@
             return;
         }
 
-        [PBAPI addPostWithLocation:self.location andImageData:__imageData andMood:[[__moods objectAtIndex:__chosenBubble] objectForKey:@"value"]];
+        [PBAPI addPostWithLocation:self.location
+                      andImageData:__imageData
+                           andMood:[[__moods objectAtIndex:__chosenBubble] objectForKey:@"value"]
+                          callback:^(NSError *error) {
+                              if (error != nil) {
+                                  NSLog(@"%@", error);
+                              }
+                              else {
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Photo Posted" message:@"Your photo and mood were successfully posted" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+                                      [alert show];
+                                  });
+                              }
+                          }];
+
+        [self dismissViewControllerAnimated:YES completion:nil];
 
         return;
     }
