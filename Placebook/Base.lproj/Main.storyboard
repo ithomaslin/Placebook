@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -65,16 +65,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDM-59-KwG">
-                                <rect key="frame" x="28" y="39" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="hot">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="hotButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yOH-a2-ROf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzz-Yx-PsR">
                                 <rect key="frame" x="224" y="62" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,7 +81,6 @@
                     <navigationItem key="navigationItem" id="321-sX-vk8"/>
                     <connections>
                         <outlet property="bottomView" destination="9M4-xi-d3I" id="F6z-qk-QW5"/>
-                        <outlet property="hotBtn" destination="wDM-59-KwG" id="Qci-h0-kwj"/>
                         <outlet property="mapView" destination="WjV-w4-lUy" id="6ay-Mu-QSN"/>
                     </connections>
                 </viewController>
@@ -272,7 +261,6 @@
         <image name="cam" width="22" height="18"/>
         <image name="close" width="22" height="22"/>
         <image name="details-item-shadow" width="320" height="127"/>
-        <image name="hot" width="22" height="22"/>
         <image name="locate" width="17" height="22"/>
         <image name="smiley-face" width="22" height="22"/>
         <image name="upSlide" width="22" height="20"/>
