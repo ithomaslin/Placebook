@@ -73,26 +73,14 @@
     [_mapView setRegion:region animated:YES];
     [_mapView regionThatFits:region];
     
-    NSMutableArray *places = [[NSMutableArray alloc] init];
-    CLLocationCoordinate2D place;
-    Annotation *ann;
-    
-    //Hardcoded demo location pin...
-    ann = [[Annotation alloc] initWithLatitude:53.482924 andLongitude:-2.200427];
-    ann.coordinate = place;
-    ann.title = @"Test";
-    ann.name = @"ann";
-    [places addObject:ann];
-    
     //User location...
     Annotation *selfAnnotation = [[Annotation alloc] initWithLatitude:self.location.coordinate.latitude andLongitude:self.location.coordinate.longitude];
     selfAnnotation.name = @"self";
     [_mapView removeAnnotations:_mapView.annotations];
     selfAnnotation.coordinate = _location.coordinate;
     selfAnnotation.title = @"I'm here!";
-    [places addObject:selfAnnotation];
     
-    [self.mapView addAnnotations:places];
+    [self.mapView addAnnotation:selfAnnotation];
     [_locationManager stopUpdatingLocation];
     
 }
@@ -101,15 +89,16 @@
 {
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
+    
     static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
     MKAnnotationView *annotationView = [_mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
-    if(annotationView)
+    if(annotationView && NO)
         return annotationView;
     else
     {
         MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
         annotationView.canShowCallout = YES;
-        if ([((Annotation *)annotation).name isEqualToString:@"self"]) {
+        if ([annotation isKindOfClass:[Annotation class]]) {
             annotationView.image = [UIImage imageNamed:@"self.png"];
         } else {
             annotationView.image = [UIImage imageNamed:@"tab-item-nearby.png"];
