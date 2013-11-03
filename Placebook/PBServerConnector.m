@@ -9,6 +9,8 @@
 #import "PBServerConnector.h"
 #import "SKCluster.h"
 
+#define kSizeProp 0.35
+
 @implementation PBServerConnector
 
 + (void)makeRequestForRegion:(CLLocationCoordinate2D)northWest to:(CLLocationCoordinate2D)southEast onCompletion:(void (^)(NSArray *clusters))completion
@@ -45,7 +47,7 @@
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                NSString *output = [[NSString alloc] initWithData:data                                                                        encoding:NSUTF8StringEncoding];
                                
-                               NSLog(@"%@", output);
+//                               NSLog(@"%@", output);
                                if (data != nil) {
                                    NSArray *clusterObject = [NSJSONSerialization JSONObjectWithData: data
                                                                                             options: NSJSONReadingMutableContainers
@@ -62,7 +64,7 @@
                                            cluster.center = CGPointMake([clusterDict[@"center"][@"lat"] floatValue], [clusterDict[@"center"][@"lon"] floatValue]);
                                            cluster.count = [clusterDict[@"total"] integerValue];
                                            cluster.thumbs = clusterDict[@"thumbs"];
-                                           cluster.relSize = 0.5 + 0.5 * (1.0* cluster.count) / total;
+                                           cluster.relSize = kSizeProp + (1-kSizeProp) * (1.0* cluster.count) / total;
                                            [clusters addObject:cluster];
                                        }
                                        completion(clusters);

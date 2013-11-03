@@ -11,7 +11,7 @@
 //#import <SDWebImage/UIImageView+WebCache.h>
 #import "UIImageView+WebCache.h"
 
-#define kBaseSize 70.0
+#define kBaseSize 90.0
 
 @implementation SKMapAnnotation
 

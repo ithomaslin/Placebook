@@ -21,7 +21,9 @@
 @interface ViewController () <WhatsHotViewControllerDelegate>
 {
     BOOL bottomViewDown;
-    
+    CGFloat _mapDelta;
+    MKCoordinateRegion _region;
+    CGFloat _spanDelta;
 }
 
 @property (nonatomic, strong) id<ADVAnimationController> animationController;
@@ -41,6 +43,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    _mapDelta = 0.0;
+    _spanDelta = 0.0;
+    
     bottomViewDown = YES; //Timeline view is hidden...
     
     //Shadow for hot button...
@@ -58,6 +64,32 @@
     
     self.locationManager.delegate = self;
     self.location = [[CLLocation alloc] init];
+    
+    if (_mapDelta == 0)
+        [self refreshMap];
+}
+
+- (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated {
+    _region = mapView.region;
+    
+    NSLog(@"Started at %@", NSStringFromCGPoint(CGPointMake(_region.center.latitude, _region.center.longitude)));
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    _mapDelta = fabs(_region.center.longitude - mapView.centerCoordinate.longitude) + fabs(_region.center.latitude - mapView.centerCoordinate.latitude);
+    
+    _spanDelta = fabs(_region.span.longitudeDelta - mapView.region.span.longitudeDelta) + fabs(_region.span.latitudeDelta - mapView.region.span.latitudeDelta);
+    
+    NSLog(@"Comparing %@", NSStringFromCGPoint(CGPointMake(_region.center.latitude, _region.center.longitude)));
+    NSLog(@"Ended at %@", NSStringFromCGPoint(CGPointMake(mapView.centerCoordinate.latitude, mapView.centerCoordinate.longitude)));
+    
+    NSLog(@"delta: %f\n", _mapDelta);
+    NSLog(@"span delta: %f\n", _spanDelta);
+    
+    if (_mapDelta > 1e-3 || _spanDelta > 1e-3)
+        [self refreshMap];
+
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
