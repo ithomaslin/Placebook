@@ -17,7 +17,7 @@
 {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     
-    self.frame = CGRectMake(0, 0, 30, 30);
+    self.frame = CGRectMake(0, 0, 45, 45);
     
     _imageView = [[UIImageView alloc] initWithFrame:self.frame];
 //    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"]
@@ -48,7 +48,7 @@
 {
     _cluster = cluster;
     
-    [_imageView setImageWithURL:[NSURL URLWithString:cluster.thumbs[0]] placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
+    [_imageView setImageWithURL:[NSURL URLWithString:cluster.thumbs[arc4random() % [cluster.thumbs count]]] placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
      ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
          [self setNeedsDisplay];
      }];
@@ -85,11 +85,12 @@
             
 //                        CGContextAddEllipseInRect(context, rect);
             [[UIColor darkGrayColor] setFill];
-            CGRect badgeRect = CGRectMake(rect.size.width - 10, 0, 10, 10);
+            CGFloat badgeSize = 12;
+            CGRect badgeRect = CGRectMake(rect.size.width - badgeSize - 2, 0, badgeSize, badgeSize);
             
             CGContextFillEllipseInRect(context, badgeRect);
             
-            NSString *count = [NSString stringWithFormat:@"%li", _cluster.count];
+            NSString *count = [NSString stringWithFormat:@"%i", _cluster.count];
             
             UIFont *font = [UIFont fontWithName: @"Courier" size: 10.0];
             NSDictionary *dictionary = @{ NSFontAttributeName: font, NSForegroundColorAttributeName : [UIColor whiteColor]};
