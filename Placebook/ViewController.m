@@ -134,7 +134,6 @@
         aView = anotherView;
     }
 
-    
     return aView;
 }
 
@@ -143,6 +142,15 @@
     CLLocationCoordinate2D northWestCorner = [self.mapView convertPoint:self.mapView.frame.origin toCoordinateFromView:_mapView];
     
     CLLocationCoordinate2D southEastCorner = [self.mapView convertPoint:CGPointMake(CGRectGetMaxX(self.mapView.frame), CGRectGetMaxY(self.mapView.frame)) toCoordinateFromView:_mapView];
+    
+    CGFloat sizeLat = southEastCorner.latitude - northWestCorner.latitude;
+    CGFloat sizeLong = southEastCorner.longitude - northWestCorner.longitude;
+    
+    northWestCorner.latitude -= sizeLat * 0.1;
+    southEastCorner.latitude += sizeLat * 0.1;
+    
+    northWestCorner.longitude -= sizeLong * 0.1;
+    southEastCorner.longitude += sizeLong * 0.1;
     
     [PBServerConnector makeRequestForRegion:northWestCorner to:southEastCorner onCompletion:^(NSArray *clusters) {
         
