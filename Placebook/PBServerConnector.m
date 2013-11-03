@@ -29,7 +29,7 @@
     NSData *bodyData = [NSJSONSerialization dataWithJSONObject:dataDict options:0 error:&err];
     
     
-    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://54.217.128.103:3000/clusters"]];
+    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://54.247.94.79:3000/clusters"]];
     
 //    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3000/clusters"]];
     

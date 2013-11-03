@@ -11,7 +11,7 @@
 //#import <SDWebImage/UIImageView+WebCache.h>
 #import "UIImageView+WebCache.h"
 
-#define kBaseSize 90.0
+#define kBaseSize 140.0
 
 @implementation SKMapAnnotation
 
@@ -24,7 +24,7 @@
     _imageView = [[UIImageView alloc] initWithFrame:self.frame];
 //    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"]
 //                   placeholderImage:[UIImage imageNamed:@"pin.png"]];
-    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"] placeholderImage:[UIImage imageNamed:@"self"] options:SDWebImageContinueInBackground completed:
+    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"] placeholderImage:[UIImage imageNamed:@"bluecircle.png"] options:SDWebImageContinueInBackground completed:
      ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
          [self setNeedsDisplay];
     }];
@@ -52,7 +52,7 @@
     _cluster = cluster;
     self.frame = CGRectMake(0, 0, floor(kBaseSize * _cluster.relSize), floor(kBaseSize * _cluster.relSize));
     [_imageView setImageWithURL:[NSURL URLWithString:cluster.thumbs[0]]
-               placeholderImage:[UIImage imageNamed:@"self"] options:SDWebImageContinueInBackground completed:
+               placeholderImage:[UIImage imageNamed:@"bluecircle.png"] options:SDWebImageContinueInBackground completed:
      ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
          [self setNeedsDisplay];
      }];
@@ -89,27 +89,27 @@
             
 //                        CGContextAddEllipseInRect(context, rect);
             [[UIColor darkGrayColor] setFill];
-            CGFloat badgeSize = 14;
+            CGFloat badgeSize = 20;
             CGRect badgeRect = CGRectMake(rect.size.width - badgeSize - 2, 0, badgeSize, badgeSize);
             
             CGContextFillEllipseInRect(context, badgeRect);
             
             NSString *count = [NSString stringWithFormat:@"%i", _cluster.count];
             
-            CGFloat vertShift = 1.0;
-            CGFloat hozShift = 0.0;
-            CGFloat fontSize = 10;
+            CGFloat vertShift = 2.0;
+            CGFloat hozShift = 1.0;
+            CGFloat fontSize = 14;
             if (_cluster.count > 9)
             {
-                fontSize = 8;
-                hozShift = 2.0;
-                vertShift = 2.0;
+                fontSize = 12;
+                hozShift = 4.0;
+                vertShift = 3.0;
             }
             if (_cluster.count > 99)
             {
-                fontSize = 6;
-                hozShift = 3.0;
-                vertShift = 3.0;
+                fontSize = 8;
+                hozShift = 5.0;
+                vertShift = 4.0;
             }
             
             UIFont *font = [UIFont fontWithName: @"Courier" size: fontSize];

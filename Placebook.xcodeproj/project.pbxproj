@@ -22,6 +22,8 @@
 		28ACD5F718267AD2001D8573 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACD5E718267AD2001D8573 /* UIImage+MultiFormat.m */; };
 		28ACD5F818267AD2001D8573 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACD5E918267AD2001D8573 /* UIImage+WebP.m */; };
 		28ACD5F918267AD2001D8573 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACD5EB18267AD2001D8573 /* UIImageView+WebCache.m */; };
+		28ACD5FB1826B206001D8573 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 28ACD5FA1826B206001D8573 /* loading.png */; };
+		28ACD5FD1826B49D001D8573 /* bluecircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 28ACD5FC1826B49D001D8573 /* bluecircle.png */; };
 		28BC6ADF1826108100ACBFBC /* PBServerConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6ADE1826108100ACBFBC /* PBServerConnector.m */; };
 		28BC6AE218261DC200ACBFBC /* SKCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6AE118261DC200ACBFBC /* SKCluster.m */; };
 		C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */; };
@@ -103,6 +105,8 @@
 		28ACD5E918267AD2001D8573 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		28ACD5EA18267AD2001D8573 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		28ACD5EB18267AD2001D8573 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		28ACD5FA1826B206001D8573 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		28ACD5FC1826B49D001D8573 /* bluecircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecircle.png; sourceTree = "<group>"; };
 		28BC6ADD1826108100ACBFBC /* PBServerConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBServerConnector.h; sourceTree = "<group>"; };
 		28BC6ADE1826108100ACBFBC /* PBServerConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBServerConnector.m; sourceTree = "<group>"; };
 		28BC6AE018261DC200ACBFBC /* SKCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCluster.h; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 				C40D67E318261F5300CF0CCD /* PBAPI.h */,
 				C40D67E418261F5300CF0CCD /* PBAPI.m */,
 				C4AFE10A182508520003135A /* Images.xcassets */,
+				28ACD5FA1826B206001D8573 /* loading.png */,
+				28ACD5FC1826B49D001D8573 /* bluecircle.png */,
 				C4AFE0F9182508520003135A /* Supporting Files */,
 			);
 			path = Placebook;
@@ -492,8 +498,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28ACD5FB1826B206001D8573 /* loading.png in Resources */,
 				C4AFE10B182508520003135A /* Images.xcassets in Resources */,
 				C4AFE13F18250B810003135A /* Locations.plist in Resources */,
+				28ACD5FD1826B49D001D8573 /* bluecircle.png in Resources */,
 				C4AFE0FD182508520003135A /* InfoPlist.strings in Resources */,
 				C4AFE106182508520003135A /* Main.storyboard in Resources */,
 			);
