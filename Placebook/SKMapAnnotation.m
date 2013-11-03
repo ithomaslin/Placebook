@@ -8,6 +8,8 @@
 
 #import "SKMapAnnotation.h"
 #import "SKCluster.h"
+//#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 
 @implementation SKMapAnnotation
 
@@ -17,7 +19,15 @@
     
     self.frame = CGRectMake(0, 0, 30, 30);
     
-//    _imageView = [[UIImageView alloc] initWithFrame:self.frame];
+    _imageView = [[UIImageView alloc] initWithFrame:self.frame];
+//    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"]
+//                   placeholderImage:[UIImage imageNamed:@"pin.png"]];
+    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"] placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
+     ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
+         [self setNeedsDisplay];
+    }];
+    
+
 //    
 //    _imageView.image = [UIImage imageNamed:@"pin.png"];
 //    [self addSubview:_imageView];
@@ -43,15 +53,32 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+            [super drawRect:rect];
     if (_cluster != nil)
     {
         if (_cluster.count  > 0)
         {
             CGContextRef context = UIGraphicsGetCurrentContext();
             
-            UIImage *icon = [UIImage imageNamed:@"placePin.png"];
+            CGContextAddEllipseInRect(context, rect);
+            CGContextSetFillColorWithColor(context, [UIColor darkGrayColor].CGColor);
+            CGContextFillPath(context);
+            
+            CGContextSaveGState(context);
+            
+            CGContextAddEllipseInRect(context, CGRectInset(rect,2,2));
+            CGContextClip(context);
+            UIImage *icon = _imageView.image;
+            
+            CGAffineTransform transform = CGAffineTransformMakeTranslation(0.0, rect.size.height);
+            transform = CGAffineTransformScale(transform, 1.0, -1.0);
+            CGContextConcatCTM(context, transform);
+            
             CGContextDrawImage(context, rect, ((UIImage*)icon).CGImage);
             
+            CGContextRestoreGState(context);
+            
+//                        CGContextAddEllipseInRect(context, rect);
             [[UIColor darkGrayColor] setFill];
             CGRect badgeRect = CGRectMake(rect.size.width - 10, 0, 10, 10);
             
@@ -68,7 +95,6 @@
         }
     }
     
-        [super drawRect:rect];
 //
 //    CGContextAddEllipseInRect(context, CGRectInset(rect, 10, 10));
 //    
@@ -84,10 +110,10 @@
 //    {
 ////        UIImage *icon = [UIImage imageNamed:@"pin.png"];
 ////        
-////        CGAffineTransform transform = CGAffineTransformMakeTranslation(0.0, rect.size.height);
-////        transform = CGAffineTransformScale(transform, 1.0, -1.0);
-////        CGContextConcatCTM(context, transform);
-////        
+//        CGAffineTransform transform = CGAffineTransformMakeTranslation(0.0, rect.size.height);
+//        transform = CGAffineTransformScale(transform, 1.0, -1.0);
+//        CGContextConcatCTM(context, transform);
+////
 ////        CGContextDrawImage(context, rect, ((UIImage*)icon).CGImage);
 ////        [icon drawInRect:rect];
 ////        UIGraphicsEndImageContext();
