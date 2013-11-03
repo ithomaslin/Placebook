@@ -52,11 +52,17 @@
                                                                                               error: &error];
                                    
                                    @try {
+                                       CGFloat total = 0.0;
+                                       for (NSDictionary *clusterDict in clusterObject) {
+                                           total += [clusterDict[@"total"] floatValue];
+                                       }
+                                       
                                        for (NSDictionary *clusterDict in clusterObject) {
                                            SKCluster *cluster = [[SKCluster alloc] init];
                                            cluster.center = CGPointMake([clusterDict[@"center"][@"lat"] floatValue], [clusterDict[@"center"][@"lon"] floatValue]);
                                            cluster.count = [clusterDict[@"total"] integerValue];
                                            cluster.thumbs = clusterDict[@"thumbs"];
+                                           cluster.relSize = 0.5 + 0.5 * (1.0* cluster.count) / total;
                                            [clusters addObject:cluster];
                                        }
                                        completion(clusters);

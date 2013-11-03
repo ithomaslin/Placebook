@@ -137,6 +137,11 @@
     return aView;
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    
+}
+
 - (void)refreshMap
 {    
     CLLocationCoordinate2D northWestCorner = [self.mapView convertPoint:self.mapView.frame.origin toCoordinateFromView:_mapView];

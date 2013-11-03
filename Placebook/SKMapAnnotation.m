@@ -11,13 +11,15 @@
 //#import <SDWebImage/UIImageView+WebCache.h>
 #import "UIImageView+WebCache.h"
 
+#define kBaseSize 70.0
+
 @implementation SKMapAnnotation
 
 - (id)initWithAnnotation:(id<MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     
-    self.frame = CGRectMake(0, 0, 45, 45);
+    self.frame = CGRectMake(0, 0, kBaseSize, kBaseSize);
     
     _imageView = [[UIImageView alloc] initWithFrame:self.frame];
 //    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"]
@@ -47,8 +49,9 @@
 - (void)setCluster:(SKCluster *)cluster
 {
     _cluster = cluster;
-    
-    [_imageView setImageWithURL:[NSURL URLWithString:cluster.thumbs[arc4random() % [cluster.thumbs count]]] placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
+    self.frame = CGRectMake(0, 0, floor(kBaseSize * _cluster.relSize), floor(kBaseSize * _cluster.relSize));
+    [_imageView setImageWithURL:[NSURL URLWithString:cluster.thumbs[0]]
+               placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
      ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
          [self setNeedsDisplay];
      }];

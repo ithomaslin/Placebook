@@ -23,6 +23,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V47-Uk-8aq">
                                         <rect key="frame" x="149" y="6" width="22" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
                                         <state key="normal" image="upSlide">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -60,6 +61,11 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="m4Z-qy-n0a" appends="YES" id="Q2J-CO-ffi"/>
+                                    <outletCollection property="gestureRecognizers" destination="m4Z-qy-n0a" appends="YES" id="y0W-SB-WVa"/>
+                                </connections>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WjV-w4-lUy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
@@ -96,7 +102,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ZCT-do-ZsA"/>
+                <swipeGestureRecognizer direction="right" id="m4Z-qy-n0a">
+                    <connections>
+                        <action selector="hotButton:" destination="vXZ-lx-hvc" id="7oT-1q-m5E"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="132" y="30"/>
         </scene>
