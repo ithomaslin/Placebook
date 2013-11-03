@@ -287,4 +287,9 @@
     
 }
 
+- (void)swipeUp:(id)sender
+{
+    
+}
+
 @end

@@ -108,16 +108,16 @@
         annotationView.canShowCallout = YES;
         if ([((Annotation *)annotation).name isEqualToString:@"self"]) {
             annotationView.image = [UIImage imageNamed:@"self.png"];
-            [annotationView.layer setShadowColor:[UIColor blackColor].CGColor];
-            [annotationView.layer setShadowOpacity:1.0f];
-            [annotationView.layer setShadowRadius:5.0f];
-            [annotationView.layer setShadowOffset:CGSizeMake(0, 0)];
-            [annotationView setBackgroundColor:[UIColor clearColor]];
         } else {
             annotationView.image = [UIImage imageNamed:@"tab-item-nearby.png"];
 //            annotationView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:@"NSData"]];
             //Set pic on the annotation...
         }
+        [annotationView.layer setShadowColor:[UIColor blackColor].CGColor];
+        [annotationView.layer setShadowOpacity:1.0f];
+        [annotationView.layer setShadowRadius:5.0f];
+        [annotationView.layer setShadowOffset:CGSizeMake(0, 0)];
+        [annotationView setBackgroundColor:[UIColor clearColor]];
         
         return annotationView;
     }

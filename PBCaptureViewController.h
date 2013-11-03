@@ -13,7 +13,7 @@
 
 #include "PBAPI.h"
 
-@interface PBCaptureViewController : UIViewController <CLLocationManagerDelegate>
+@interface PBCaptureViewController : UIViewController <CLLocationManagerDelegate, UIGestureRecognizerDelegate>
 {
     
 }
