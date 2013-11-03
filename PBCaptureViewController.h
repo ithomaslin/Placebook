@@ -13,9 +13,9 @@
 
 #include "PBAPI.h"
 
-@interface PBCaptureViewController : UIViewController <CLLocationManagerDelegate, UIGestureRecognizerDelegate>
+@interface PBCaptureViewController : UIViewController <CLLocationManagerDelegate>
 {
-    
+
 }
 
 @property (strong, nonatomic) CLLocationManager *locationManager;

@@ -431,7 +431,6 @@
 			files = (
 				C40D67E91826223500CF0CCD /* PBCaptureViewController.m in Sources */,
 				C4AFE109182508520003135A /* ViewController.m in Sources */,
-				C4AFE14518251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
 				28BC6AE218261DC200ACBFBC /* SKCluster.m in Sources */,
 				C40FFB011825677E00E75793 /* WhatsHotViewController.m in Sources */,
 				C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */,
@@ -575,7 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Arnfeld (NB2L8PT3NW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Placebook/Placebook-Prefix.pch";
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
@@ -589,7 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Arnfeld (NB2L8PT3NW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Placebook/Placebook-Prefix.pch";
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
