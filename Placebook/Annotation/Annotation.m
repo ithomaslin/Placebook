@@ -10,7 +10,7 @@
 
 @implementation Annotation
 
-@synthesize coordinate, latitude, longitude;
+@synthesize coordinate, latitude, longitude, title, subTitle, name, leftCalloutAccessoryView;
 
 -(id)initWithLatitude:(double)theLatitude andLongitude:(double)theLongitude
 {
@@ -27,7 +27,7 @@
 
 - (CLLocationCoordinate2D)coordinate
 {
-	CLLocationCoordinate2D coord = {self.latitude, self.longitude};
+    CLLocationCoordinate2D coord = {self.latitude, self.longitude};
 	return coord;
 }
 

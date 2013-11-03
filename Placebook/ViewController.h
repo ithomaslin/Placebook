@@ -10,13 +10,18 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate,
-UIGestureRecognizerDelegate, MKMapViewDelegate>
+@interface ViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate, UIViewControllerTransitioningDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
-@property (weak, nonatomic) IBOutlet UICollectionView *timelineView;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *location;
+@property (weak, nonatomic) IBOutlet UIButton *hotBtn;
+
 
 - (IBAction)mapPressed:(id)sender;
+- (IBAction)hotButton:(id)sender;
+- (IBAction)locate:(id)sender;
+
 
 @end
