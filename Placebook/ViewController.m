@@ -199,6 +199,12 @@
     [_mapView regionThatFits:region];
 }
 
+- (IBAction)camLaunch:(id)sender
+{
+    _captureViewController = [[PBCaptureViewController alloc] init];
+    [self presentViewController:_captureViewController animated:YES completion:nil];
+}
+
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                   presentingController:(UIViewController *)presenting
                                                                       sourceController:(UIViewController *)source

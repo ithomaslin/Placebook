@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */; };
+		C40D67E018261F1700CF0CCD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40D67DF18261F1700CF0CCD /* AVFoundation.framework */; };
+		C40D67E218261F2100CF0CCD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40D67E118261F2100CF0CCD /* ImageIO.framework */; };
+		C40D67E518261F5300CF0CCD /* PBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E418261F5300CF0CCD /* PBAPI.m */; };
+		C40D67E618261F5300CF0CCD /* PBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E418261F5300CF0CCD /* PBAPI.m */; };
+		C40D67E91826223500CF0CCD /* PBCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E81826223500CF0CCD /* PBCaptureViewController.m */; };
+		C40D67EA1826223500CF0CCD /* PBCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E81826223500CF0CCD /* PBCaptureViewController.m */; };
 		C40FFAFD1825647D00E75793 /* DropAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFA1825647D00E75793 /* DropAnimationController.m */; };
 		C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFC1825647D00E75793 /* ZoomAnimationController.m */; };
 		C40FFB011825677E00E75793 /* WhatsHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFB001825677E00E75793 /* WhatsHotViewController.m */; };
@@ -51,6 +57,12 @@
 /* Begin PBXFileReference section */
 		C40D67B01825FB6F00CF0CCD /* TimelineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineDetailViewController.h; sourceTree = "<group>"; };
 		C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDetailViewController.m; sourceTree = "<group>"; };
+		C40D67DF18261F1700CF0CCD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C40D67E118261F2100CF0CCD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C40D67E318261F5300CF0CCD /* PBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAPI.h; sourceTree = "<group>"; };
+		C40D67E418261F5300CF0CCD /* PBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAPI.m; sourceTree = "<group>"; };
+		C40D67E71826223500CF0CCD /* PBCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PBCaptureViewController.h; path = ../PBCaptureViewController.h; sourceTree = "<group>"; };
+		C40D67E81826223500CF0CCD /* PBCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PBCaptureViewController.m; path = ../PBCaptureViewController.m; sourceTree = "<group>"; };
 		C40FFAF81825647D00E75793 /* ADVAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVAnimationController.h; sourceTree = "<group>"; };
 		C40FFAF91825647D00E75793 /* DropAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropAnimationController.h; sourceTree = "<group>"; };
 		C40FFAFA1825647D00E75793 /* DropAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropAnimationController.m; sourceTree = "<group>"; };
@@ -94,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D67E218261F2100CF0CCD /* ImageIO.framework in Frameworks */,
+				C40D67E018261F1700CF0CCD /* AVFoundation.framework in Frameworks */,
 				C4AFE12C182508C00003135A /* MapKit.framework in Frameworks */,
 				C4AFE12A182508B90003135A /* QuartzCore.framework in Frameworks */,
 				C4AFE128182508B10003135A /* CoreImage.framework in Frameworks */,
@@ -150,6 +164,8 @@
 		C4AFE0F1182508520003135A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C40D67E118261F2100CF0CCD /* ImageIO.framework */,
+				C40D67DF18261F1700CF0CCD /* AVFoundation.framework */,
 				C4AFE12B182508C00003135A /* MapKit.framework */,
 				C4AFE129182508B90003135A /* QuartzCore.framework */,
 				C4AFE127182508B10003135A /* CoreImage.framework */,
@@ -179,6 +195,10 @@
 				C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */,
 				C40FFAFF1825677E00E75793 /* WhatsHotViewController.h */,
 				C40FFB001825677E00E75793 /* WhatsHotViewController.m */,
+				C40D67E71826223500CF0CCD /* PBCaptureViewController.h */,
+				C40D67E81826223500CF0CCD /* PBCaptureViewController.m */,
+				C40D67E318261F5300CF0CCD /* PBAPI.h */,
+				C40D67E418261F5300CF0CCD /* PBAPI.m */,
 				C4AFE10A182508520003135A /* Images.xcassets */,
 				C4AFE0F9182508520003135A /* Supporting Files */,
 			);
@@ -334,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D67E91826223500CF0CCD /* PBCaptureViewController.m in Sources */,
 				C4AFE109182508520003135A /* ViewController.m in Sources */,
 				C40FFB011825677E00E75793 /* WhatsHotViewController.m in Sources */,
 				C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */,
@@ -341,6 +362,7 @@
 				C4AFE13018250A860003135A /* Annotation.m in Sources */,
 				C40FFAFD1825647D00E75793 /* DropAnimationController.m in Sources */,
 				C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */,
+				C40D67E518261F5300CF0CCD /* PBAPI.m in Sources */,
 				C46608EE1825DA1B00061499 /* TimelineCell.m in Sources */,
 				C4AFE0FF182508520003135A /* main.m in Sources */,
 				C477E0741825D75600E5C230 /* TimelineViewController.m in Sources */,
@@ -351,7 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D67E618261F5300CF0CCD /* PBAPI.m in Sources */,
 				C4AFE13118250A860003135A /* Annotation.m in Sources */,
+				C40D67EA1826223500CF0CCD /* PBCaptureViewController.m in Sources */,
 				C4AFE11E182508520003135A /* PlacebookTests.m in Sources */,
 				C46608EF1825DA1B00061499 /* TimelineCell.m in Sources */,
 				C477E0751825D75600E5C230 /* TimelineViewController.m in Sources */,
