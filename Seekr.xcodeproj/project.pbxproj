@@ -61,6 +61,9 @@
 		C4AFE13118250A860003135A /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE12F18250A860003135A /* Annotation.m */; };
 		C4AFE13F18250B810003135A /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AFE13E18250B810003135A /* Locations.plist */; };
 		C4AFE14018250B810003135A /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AFE13E18250B810003135A /* Locations.plist */; };
+		E2894E921826ABFC0054F5D3 /* londoneye.gpx in Resources */ = {isa = PBXBuildFile; fileRef = E2894E8F1826ABFC0054F5D3 /* londoneye.gpx */; };
+		E2894E931826ABFC0054F5D3 /* rain.gpx in Resources */ = {isa = PBXBuildFile; fileRef = E2894E901826ABFC0054F5D3 /* rain.gpx */; };
+		E2894E941826ABFC0054F5D3 /* wembly.gpx in Resources */ = {isa = PBXBuildFile; fileRef = E2894E911826ABFC0054F5D3 /* wembly.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,9 @@
 		C4AFE12E18250A860003135A /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		C4AFE12F18250A860003135A /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		C4AFE13E18250B810003135A /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		E2894E8F1826ABFC0054F5D3 /* londoneye.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = londoneye.gpx; path = ../londoneye.gpx; sourceTree = "<group>"; };
+		E2894E901826ABFC0054F5D3 /* rain.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rain.gpx; path = ../rain.gpx; sourceTree = "<group>"; };
+		E2894E911826ABFC0054F5D3 /* wembly.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = wembly.gpx; path = ../wembly.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +380,9 @@
 		C4AFE0F9182508520003135A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E2894E8F1826ABFC0054F5D3 /* londoneye.gpx */,
+				E2894E901826ABFC0054F5D3 /* rain.gpx */,
+				E2894E911826ABFC0054F5D3 /* wembly.gpx */,
 				C4AFE104182508520003135A /* Main.storyboard */,
 				C4AFE13D18250B810003135A /* Data */,
 				C4AFE0FA182508520003135A /* Placebook-Info.plist */,
@@ -500,10 +509,13 @@
 			files = (
 				28ACD5FB1826B206001D8573 /* loading.png in Resources */,
 				C4AFE10B182508520003135A /* Images.xcassets in Resources */,
+				E2894E921826ABFC0054F5D3 /* londoneye.gpx in Resources */,
+				E2894E941826ABFC0054F5D3 /* wembly.gpx in Resources */,
 				C4AFE13F18250B810003135A /* Locations.plist in Resources */,
 				28ACD5FD1826B49D001D8573 /* bluecircle.png in Resources */,
 				C4AFE0FD182508520003135A /* InfoPlist.strings in Resources */,
 				C4AFE106182508520003135A /* Main.storyboard in Resources */,
+				E2894E931826ABFC0054F5D3 /* rain.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
