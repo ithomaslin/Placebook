@@ -26,5 +26,7 @@
 - (IBAction)hotButton:(id)sender;
 - (IBAction)locate:(id)sender;
 
+- (IBAction)refreshMap;
+
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28BC6ADF1826108100ACBFBC /* PBServerConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6ADE1826108100ACBFBC /* PBServerConnector.m */; };
+		28BC6AE218261DC200ACBFBC /* SKCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6AE118261DC200ACBFBC /* SKCluster.m */; };
 		C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */; };
 		C40FFAFD1825647D00E75793 /* DropAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFA1825647D00E75793 /* DropAnimationController.m */; };
 		C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFC1825647D00E75793 /* ZoomAnimationController.m */; };
@@ -55,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28BC6ADD1826108100ACBFBC /* PBServerConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBServerConnector.h; sourceTree = "<group>"; };
+		28BC6ADE1826108100ACBFBC /* PBServerConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBServerConnector.m; sourceTree = "<group>"; };
+		28BC6AE018261DC200ACBFBC /* SKCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCluster.h; sourceTree = "<group>"; };
+		28BC6AE118261DC200ACBFBC /* SKCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCluster.m; sourceTree = "<group>"; };
 		C40D67B01825FB6F00CF0CCD /* TimelineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineDetailViewController.h; sourceTree = "<group>"; };
 		C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDetailViewController.m; sourceTree = "<group>"; };
 		C40FFAF81825647D00E75793 /* ADVAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVAnimationController.h; sourceTree = "<group>"; };
@@ -128,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28BC6ADC1826106800ACBFBC /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				28BC6ADD1826108100ACBFBC /* PBServerConnector.h */,
+				28BC6ADE1826108100ACBFBC /* PBServerConnector.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
 		C40FFAF71825647D00E75793 /* TransitionControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +191,7 @@
 		C4AFE0F8182508520003135A /* Placebook */ = {
 			isa = PBXGroup;
 			children = (
+				28BC6ADC1826106800ACBFBC /* Server */,
 				C40FFAF71825647D00E75793 /* TransitionControllers */,
 				C4AFE13218250AE90003135A /* Repository */,
 				C4AFE12D18250A860003135A /* Annotation */,
@@ -186,6 +202,8 @@
 				C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */,
 				C4AFE107182508520003135A /* ViewController.h */,
 				C4AFE108182508520003135A /* ViewController.m */,
+				28BC6AE018261DC200ACBFBC /* SKCluster.h */,
+				28BC6AE118261DC200ACBFBC /* SKCluster.m */,
 				C477E0721825D75600E5C230 /* TimelineViewController.h */,
 				C477E0731825D75600E5C230 /* TimelineViewController.m */,
 				C46608EC1825DA1A00061499 /* TimelineCell.h */,
@@ -378,8 +396,10 @@
 			files = (
 				C4AFE109182508520003135A /* ViewController.m in Sources */,
 				C4AFE14518251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
+				28BC6AE218261DC200ACBFBC /* SKCluster.m in Sources */,
 				C40FFB011825677E00E75793 /* WhatsHotViewController.m in Sources */,
 				C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */,
+				28BC6ADF1826108100ACBFBC /* PBServerConnector.m in Sources */,
 				C4AFE103182508520003135A /* AppDelegate.m in Sources */,
 				C4AFE13018250A860003135A /* Annotation.m in Sources */,
 				C4AFE13B18250AE90003135A /* Model.m in Sources */,

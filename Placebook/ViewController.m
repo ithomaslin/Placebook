@@ -14,10 +14,13 @@
 #import "DropAnimationController.h"
 #import "TimelineViewController.h"
 #import "WhatsHotViewController.h"
+#import "PBServerConnector.h"
+#import "SKCluster.h"
 
 @interface ViewController () <WhatsHotViewControllerDelegate>
 {
     BOOL bottomViewDown;
+    
 }
 
 @property (nonatomic, strong) id<ADVAnimationController> animationController;
@@ -46,7 +49,7 @@
     [_hotBtn.layer setShadowOffset:CGSizeMake(0, 0)];
     [_hotBtn setBackgroundColor:[UIColor clearColor]];
     
-    self.mapView.delegate = self;
+//    self.mapView.delegate = self;
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
@@ -123,11 +126,25 @@
     return nil;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)refreshMap
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    CLLocationCoordinate2D center = self.mapView.centerCoordinate;
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(center, 2000.0, 2000.0);
+    CLLocationCoordinate2D northWestCorner, southEastCorner;
+    northWestCorner.latitude  = center.latitude  - (region.span.latitudeDelta  / 2.0);
+    northWestCorner.longitude = center.longitude + (region.span.longitudeDelta / 2.0);
+    southEastCorner.latitude  = center.latitude  + (region.span.latitudeDelta  / 2.0);
+    southEastCorner.longitude = center.longitude - (region.span.longitudeDelta / 2.0);
+    
+    [PBServerConnector makeRequestForRegion:northWestCorner to:southEastCorner onCompletion:^(NSArray *clusters) {
+
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        // Add all those to the map
+        for (SKCluster *cluster in clusters)
+            [self.mapView addAnnotation:cluster];
+    }];
 }
+
 
 - (IBAction)mapPressed:(id)sender {
     
@@ -214,6 +231,12 @@
 
 - (void)didChooseHotPlace:(WhatsHotViewController *)whatshotVC{
 
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end
