@@ -7,6 +7,7 @@
 //
 
 #import "WhatsHotViewController.h"
+#import "ViewController.h"
 
 @interface WhatsHotViewController ()
 
@@ -35,7 +36,7 @@
 //    NSData *jsonData = [NSData dataWithContentsOfURL:baseURL];
 //    NSError *error;
     
-    
+    _geoArray = [[NSMutableArray alloc] initWithObjects:@"One", @"Two", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +73,14 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ViewController *vc = [sb instantiateViewControllerWithIdentifier:@"vc"];
+    
+    vc.locationArray = _geoArray;
+    NSLog(@"%@", vc.locationArray);
+    if ([self.delegate respondsToSelector:@selector(didChooseHotPlace:)]) {
+        [self.delegate didChooseHotPlace:self];
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

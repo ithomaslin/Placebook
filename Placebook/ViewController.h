@@ -11,13 +11,16 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface ViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate, UIViewControllerTransitioningDelegate>
-
+{
+    NSMutableArray *locationArray;
+}
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 @property (weak, nonatomic) IBOutlet UIButton *hotBtn;
 
+@property (retain, nonatomic) NSMutableArray *locationArray;
 
 - (IBAction)mapPressed:(id)sender;
 - (IBAction)hotButton:(id)sender;

@@ -11,6 +11,7 @@
 @interface TimelineCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *placeImage;
 @property (strong, nonatomic) IBOutlet UIImageView *moodImage;
-@property (strong, nonatomic) IBOutlet UITextView *textField;
+@property (strong, nonatomic) IBOutlet UILabel *labelText;
+
 
 @end

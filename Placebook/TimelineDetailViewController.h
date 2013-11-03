@@ -10,4 +10,5 @@
 
 @interface TimelineDetailViewController : UIViewController
 
+- (IBAction)back:(id)sender;
 @end

@@ -13,8 +13,9 @@
 #import "ADVAnimationController.h"
 #import "DropAnimationController.h"
 #import "TimelineViewController.h"
+#import "WhatsHotViewController.h"
 
-@interface ViewController () <TimelineDelegate>
+@interface ViewController () <WhatsHotViewControllerDelegate>
 {
     BOOL bottomViewDown;
 }
@@ -216,6 +217,10 @@
                      } completion:^(BOOL finished){
                          bottomViewDown = YES;
     }];
+}
+
+- (void)didChooseHotPlace:(WhatsHotViewController *)whatshotVC{
+//    NSLog(@"%@", _locationArray);
 }
 
 @end

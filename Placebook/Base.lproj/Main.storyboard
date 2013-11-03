@@ -157,26 +157,25 @@
                                                     <rect key="frame" x="20" y="20" width="22" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ap-Do-faz">
-                                                    <rect key="frame" x="0.0" y="50" width="319" height="160"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="details-item-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="xI5-Bt-BLs">
                                                     <rect key="frame" x="0.0" y="169" width="319" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk6-0v-JJ3">
+                                                    <rect key="frame" x="20" y="78" width="279" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.52913229070000001" blue="0.13047261269999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="labelText" destination="hk6-0v-JJ3" id="GPW-ty-nNB"/>
                                             <outlet property="moodImage" destination="PMv-6g-Q1Q" id="acx-I8-euv"/>
                                             <outlet property="placeImage" destination="8c2-46-lRy" id="jrr-n8-L6D"/>
-                                            <outlet property="textField" destination="8ap-Do-faz" id="pgb-QM-Qfd"/>
                                             <segue destination="8fb-tD-zQA" kind="push" identifier="TimelinePush" id="lar-Ti-Qx8"/>
                                         </connections>
                                     </collectionViewCell>
@@ -199,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="1203" y="659"/>
         </scene>
-        <!--View Controller-->
+        <!--Timeline Detail View Controller-->
         <scene sceneID="1xA-AM-82W">
             <objects>
-                <viewController id="8fb-tD-zQA" sceneMemberID="viewController">
+                <viewController id="8fb-tD-zQA" customClass="TimelineDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9RM-0T-eA2"/>
                         <viewControllerLayoutGuide type="bottom" id="WS1-Tm-gJb"/>
@@ -210,6 +209,18 @@
                     <view key="view" contentMode="scaleToFill" id="vvW-ca-MXO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="323"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG5-Rx-jCK">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="8fb-tD-zQA" eventType="touchUpInside" id="BBQ-zb-uir"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yGb-FY-CnZ"/>

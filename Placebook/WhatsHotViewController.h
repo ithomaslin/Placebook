@@ -10,8 +10,16 @@
 
 @protocol WhatsHotViewControllerDelegate;
 
-@interface WhatsHotViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface WhatsHotViewController : UIViewController
+<UITableViewDataSource, UITableViewDelegate>
+
+@property (assign, nonatomic) id<WhatsHotViewControllerDelegate>delegate;
 
 - (IBAction)closeButton:(id)sender;
 
+@end
+
+@protocol WhatsHotViewControllerDelegate <NSObject>
+
+- (void)didChooseHotPlace:(WhatsHotViewController *)indexPath;
 @end

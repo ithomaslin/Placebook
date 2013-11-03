@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */; };
+		C40FFAFD1825647D00E75793 /* DropAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFA1825647D00E75793 /* DropAnimationController.m */; };
+		C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFC1825647D00E75793 /* ZoomAnimationController.m */; };
+		C40FFB011825677E00E75793 /* WhatsHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFB001825677E00E75793 /* WhatsHotViewController.m */; };
+		C46608EE1825DA1B00061499 /* TimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46608ED1825DA1A00061499 /* TimelineCell.m */; };
+		C46608EF1825DA1B00061499 /* TimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46608ED1825DA1A00061499 /* TimelineCell.m */; };
+		C477E0741825D75600E5C230 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C477E0731825D75600E5C230 /* TimelineViewController.m */; };
+		C477E0751825D75600E5C230 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C477E0731825D75600E5C230 /* TimelineViewController.m */; };
 		C4AFE0F3182508520003135A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE0F2182508520003135A /* Foundation.framework */; };
 		C4AFE0F5182508520003135A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE0F4182508520003135A /* CoreGraphics.framework */; };
 		C4AFE0F7182508520003135A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE0F6182508520003135A /* UIKit.framework */; };
@@ -47,6 +55,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40D67B01825FB6F00CF0CCD /* TimelineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineDetailViewController.h; sourceTree = "<group>"; };
+		C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDetailViewController.m; sourceTree = "<group>"; };
+		C40FFAF81825647D00E75793 /* ADVAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVAnimationController.h; sourceTree = "<group>"; };
+		C40FFAF91825647D00E75793 /* DropAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropAnimationController.h; sourceTree = "<group>"; };
+		C40FFAFA1825647D00E75793 /* DropAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropAnimationController.m; sourceTree = "<group>"; };
+		C40FFAFB1825647D00E75793 /* ZoomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomAnimationController.h; sourceTree = "<group>"; };
+		C40FFAFC1825647D00E75793 /* ZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomAnimationController.m; sourceTree = "<group>"; };
+		C40FFAFF1825677E00E75793 /* WhatsHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatsHotViewController.h; sourceTree = "<group>"; };
+		C40FFB001825677E00E75793 /* WhatsHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatsHotViewController.m; sourceTree = "<group>"; };
+		C46608EC1825DA1A00061499 /* TimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineCell.h; sourceTree = "<group>"; };
+		C46608ED1825DA1A00061499 /* TimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineCell.m; sourceTree = "<group>"; };
+		C477E0721825D75600E5C230 /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		C477E0731825D75600E5C230 /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
 		C4AFE0EF182508520003135A /* Placebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Placebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AFE0F2182508520003135A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4AFE0F4182508520003135A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,6 +128,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40FFAF71825647D00E75793 /* TransitionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C40FFAF81825647D00E75793 /* ADVAnimationController.h */,
+				C40FFAF91825647D00E75793 /* DropAnimationController.h */,
+				C40FFAFA1825647D00E75793 /* DropAnimationController.m */,
+				C40FFAFB1825647D00E75793 /* ZoomAnimationController.h */,
+				C40FFAFC1825647D00E75793 /* ZoomAnimationController.m */,
+			);
+			path = TransitionControllers;
+			sourceTree = "<group>";
+		};
 		C4AFE0E6182508520003135A = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +176,7 @@
 		C4AFE0F8182508520003135A /* Placebook */ = {
 			isa = PBXGroup;
 			children = (
+				C40FFAF71825647D00E75793 /* TransitionControllers */,
 				C4AFE13218250AE90003135A /* Repository */,
 				C4AFE12D18250A860003135A /* Annotation */,
 				C4AFE101182508520003135A /* AppDelegate.h */,
@@ -152,6 +186,14 @@
 				C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */,
 				C4AFE107182508520003135A /* ViewController.h */,
 				C4AFE108182508520003135A /* ViewController.m */,
+				C477E0721825D75600E5C230 /* TimelineViewController.h */,
+				C477E0731825D75600E5C230 /* TimelineViewController.m */,
+				C46608EC1825DA1A00061499 /* TimelineCell.h */,
+				C46608ED1825DA1A00061499 /* TimelineCell.m */,
+				C40D67B01825FB6F00CF0CCD /* TimelineDetailViewController.h */,
+				C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */,
+				C40FFAFF1825677E00E75793 /* WhatsHotViewController.h */,
+				C40FFB001825677E00E75793 /* WhatsHotViewController.m */,
 				C4AFE10A182508520003135A /* Images.xcassets */,
 				C4AFE0F9182508520003135A /* Supporting Files */,
 			);
@@ -279,6 +321,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = AppCanvas;
 				TargetAttributes = {
+					C4AFE0EE182508520003135A = {
+						DevelopmentTeam = XGDS2S9G54;
+					};
 					C4AFE10F182508520003135A = {
 						TestTargetID = C4AFE0EE182508520003135A;
 					};
@@ -333,11 +378,17 @@
 			files = (
 				C4AFE109182508520003135A /* ViewController.m in Sources */,
 				C4AFE14518251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
+				C40FFB011825677E00E75793 /* WhatsHotViewController.m in Sources */,
+				C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */,
 				C4AFE103182508520003135A /* AppDelegate.m in Sources */,
 				C4AFE13018250A860003135A /* Annotation.m in Sources */,
 				C4AFE13B18250AE90003135A /* Model.m in Sources */,
+				C40FFAFD1825647D00E75793 /* DropAnimationController.m in Sources */,
+				C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */,
+				C46608EE1825DA1B00061499 /* TimelineCell.m in Sources */,
 				C4AFE0FF182508520003135A /* main.m in Sources */,
 				C4AFE13918250AE90003135A /* DataLoader.m in Sources */,
+				C477E0741825D75600E5C230 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +400,9 @@
 				C4AFE11E182508520003135A /* PlacebookTests.m in Sources */,
 				C4AFE14618251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
 				C4AFE13A18250AE90003135A /* DataLoader.m in Sources */,
+				C46608EF1825DA1B00061499 /* TimelineCell.m in Sources */,
 				C4AFE13C18250AE90003135A /* Model.m in Sources */,
+				C477E0751825D75600E5C230 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Placebook/Placebook-Prefix.pch";
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
@@ -481,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Placebook/Placebook-Prefix.pch";
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
