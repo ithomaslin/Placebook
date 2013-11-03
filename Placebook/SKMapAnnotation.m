@@ -47,6 +47,11 @@
 - (void)setCluster:(SKCluster *)cluster
 {
     _cluster = cluster;
+    
+    [_imageView setImageWithURL:[NSURL URLWithString:cluster.thumbs[0]] placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
+     ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
+         [self setNeedsDisplay];
+     }];
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -87,7 +92,7 @@
             NSString *count = [NSString stringWithFormat:@"%li", _cluster.count];
             
             UIFont *font = [UIFont fontWithName: @"Courier" size: 10.0];
-            NSDictionary *dictionary = @{ NSFontAttributeName: font};
+            NSDictionary *dictionary = @{ NSFontAttributeName: font, NSForegroundColorAttributeName : [UIColor whiteColor]};
             
             CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
                                           

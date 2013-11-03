@@ -56,6 +56,7 @@
                                            SKCluster *cluster = [[SKCluster alloc] init];
                                            cluster.center = CGPointMake([clusterDict[@"center"][@"lat"] floatValue], [clusterDict[@"center"][@"lon"] floatValue]);
                                            cluster.count = [clusterDict[@"total"] integerValue];
+                                           cluster.thumbs = clusterDict[@"thumbs"];
                                            [clusters addObject:cluster];
                                        }
                                        completion(clusters);

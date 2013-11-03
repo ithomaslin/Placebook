@@ -13,5 +13,6 @@
 
 @property (nonatomic) NSInteger count;
 @property (nonatomic) CGPoint center;
+@property (nonatomic, strong) NSArray *thumbs;
 
 @end
