@@ -128,14 +128,10 @@
 }
 
 - (void)refreshMap
-{
-    CLLocationCoordinate2D center = self.mapView.centerCoordinate;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(center, 2000.0, 2000.0);
-    CLLocationCoordinate2D northWestCorner, southEastCorner;
-    northWestCorner.latitude  = center.latitude  - (region.span.latitudeDelta  / 2.0);
-    northWestCorner.longitude = center.longitude + (region.span.longitudeDelta / 2.0);
-    southEastCorner.latitude  = center.latitude  + (region.span.latitudeDelta  / 2.0);
-    southEastCorner.longitude = center.longitude - (region.span.longitudeDelta / 2.0);
+{    
+    CLLocationCoordinate2D northWestCorner = [self.mapView convertPoint:self.mapView.frame.origin toCoordinateFromView:_mapView];
+    
+    CLLocationCoordinate2D southEastCorner = [self.mapView convertPoint:CGPointMake(CGRectGetMaxX(self.mapView.frame), CGRectGetMaxY(self.mapView.frame)) toCoordinateFromView:_mapView];
     
     [PBServerConnector makeRequestForRegion:northWestCorner to:southEastCorner onCompletion:^(NSArray *clusters) {
 
