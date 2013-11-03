@@ -37,7 +37,9 @@
     
     [_activityIndicator stopAnimating];
     
-//    NSURL *baseURL = [NSURL URLWithString:@"string"];
+    //    NSURL *baseURL = [NSURL URLWithString:@"http://powerful-harbor-6317.herokuapp.com/pins.json"];
+    //    NSData *jsonData = [NSData dataWithContentsOfURL:baseURL];
+    //    NSError *error;
     
 }
 
