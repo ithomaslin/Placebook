@@ -27,6 +27,8 @@
 
 @implementation ViewController
 
+@synthesize locationArray;
+
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
@@ -220,7 +222,7 @@
 }
 
 - (void)didChooseHotPlace:(WhatsHotViewController *)whatshotVC{
-//    NSLog(@"%@", _locationArray);
+
 }
 
 @end

@@ -35,8 +35,6 @@
 //    NSURL *baseURL = [NSURL URLWithString:@"http://powerful-harbor-6317.herokuapp.com/pins.json"];
 //    NSData *jsonData = [NSData dataWithContentsOfURL:baseURL];
 //    NSError *error;
-    
-    _geoArray = [[NSMutableArray alloc] initWithObjects:@"One", @"Two", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,7 +75,6 @@
     ViewController *vc = [sb instantiateViewControllerWithIdentifier:@"vc"];
     
     vc.locationArray = _geoArray;
-    NSLog(@"%@", vc.locationArray);
     if ([self.delegate respondsToSelector:@selector(didChooseHotPlace:)]) {
         [self.delegate didChooseHotPlace:self];
     }
