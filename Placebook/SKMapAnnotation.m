@@ -49,16 +49,20 @@
         {
             CGContextRef context = UIGraphicsGetCurrentContext();
             
-            UIImage *icon = [UIImage imageNamed:@"pin.png"];
+            UIImage *icon = [UIImage imageNamed:@"placePin.png"];
             CGContextDrawImage(context, rect, ((UIImage*)icon).CGImage);
             
-            [[UIColor redColor] setFill];
+            [[UIColor darkGrayColor] setFill];
             CGRect badgeRect = CGRectMake(rect.size.width - 10, 0, 10, 10);
+            
             CGContextFillEllipseInRect(context, badgeRect);
+            
             NSString *count = [NSString stringWithFormat:@"%li", _cluster.count];
             
             UIFont *font = [UIFont fontWithName: @"Courier" size: 10.0];
             NSDictionary *dictionary = @{ NSFontAttributeName: font};
+            
+            CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
                                           
             [count drawAtPoint:CGPointMake(CGRectGetMidX(badgeRect)-2.0, CGRectGetMinY(badgeRect)) withAttributes:dictionary];
         }
