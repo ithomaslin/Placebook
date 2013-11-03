@@ -27,16 +27,16 @@
     NSData *bodyData = [NSJSONSerialization dataWithJSONObject:dataDict options:0 error:&err];
     
     
-    //    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://54.217.128.103:3000/posts"]];
+    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://54.217.128.103:3000/clusters"]];
     
-    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3000/clusters"]];
+//    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3000/clusters"]];
     
     
     // Set the request's content type to application/x-www-form-urlencoded
     [postRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     [postRequest setHTTPMethod:@"POST"];
-    [postRequest setValue:[NSString stringWithFormat:@"%d", [bodyData length]] forHTTPHeaderField:@"Content-Length"];
+    [postRequest setValue:[NSString stringWithFormat:@"%i", [bodyData length]] forHTTPHeaderField:@"Content-Length"];
     [postRequest setHTTPBody:bodyData];
     
     __block NSMutableArray *clusters = [NSMutableArray array];;
