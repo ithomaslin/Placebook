@@ -157,6 +157,57 @@
 			path = TransitionControllers;
 			sourceTree = "<group>";
 		};
+		C426202E18262F210051A869 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C40D67E71826223500CF0CCD /* PBCaptureViewController.h */,
+				C40D67E81826223500CF0CCD /* PBCaptureViewController.m */,
+				C40D67E318261F5300CF0CCD /* PBAPI.h */,
+				C40D67E418261F5300CF0CCD /* PBAPI.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		C426202F18262F330051A869 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				C477E0721825D75600E5C230 /* TimelineViewController.h */,
+				C477E0731825D75600E5C230 /* TimelineViewController.m */,
+				C46608EC1825DA1A00061499 /* TimelineCell.h */,
+				C46608ED1825DA1A00061499 /* TimelineCell.m */,
+				C40D67B01825FB6F00CF0CCD /* TimelineDetailViewController.h */,
+				C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		C426203018262F440051A869 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFE107182508520003135A /* ViewController.h */,
+				C4AFE108182508520003135A /* ViewController.m */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
+		C426203118262F530051A869 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				C40FFAFF1825677E00E75793 /* WhatsHotViewController.h */,
+				C40FFB001825677E00E75793 /* WhatsHotViewController.m */,
+			);
+			name = Hot;
+			sourceTree = "<group>";
+		};
+		C426203218262F5B0051A869 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFE101182508520003135A /* AppDelegate.h */,
+				C4AFE102182508520003135A /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		C4AFE0E6182508520003135A = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +249,11 @@
 				28BC6ADC1826106800ACBFBC /* Server */,
 				C40FFAF71825647D00E75793 /* TransitionControllers */,
 				C4AFE12D18250A860003135A /* Annotation */,
+				C426203218262F5B0051A869 /* AppDelegate */,
+				C426203018262F440051A869 /* Main View */,
+				C426202F18262F330051A869 /* Timeline */,
+				C426203118262F530051A869 /* Hot */,
+				C426202E18262F210051A869 /* Camera */,
 				C4AFE101182508520003135A /* AppDelegate.h */,
 				C4AFE102182508520003135A /* AppDelegate.m */,
 				C4AFE104182508520003135A /* Main.storyboard */,
@@ -226,6 +282,7 @@
 		C4AFE0F9182508520003135A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4AFE104182508520003135A /* Main.storyboard */,
 				C4AFE13D18250B810003135A /* Data */,
 				C4AFE0FA182508520003135A /* Placebook-Info.plist */,
 				C4AFE0FB182508520003135A /* InfoPlist.strings */,

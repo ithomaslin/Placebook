@@ -48,7 +48,8 @@
     [closeButton setBackgroundColor:[UIColor whiteColor]];
     [closeButton.layer setNeedsDisplayOnBoundsChange:YES];
     [closeButton addTarget:self action:@selector(closeCam:) forControlEvents:UIControlEventTouchUpInside];
-    closeButton.layer.cornerRadius = buttonSize.width / 4.2;
+    closeButton.layer.cornerRadius = closeButtonSize.width / 2.0;
+
     closeButton.clipsToBounds = YES;
     [self.view addSubview:closeButton];
     UIImageView *closeImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"close.png"]];
@@ -284,6 +285,11 @@
         [piece setCenter:CGPointMake([piece center].x + translation.x, [piece center].y + translation.y)];
         [gestureRecognizer setTranslation:CGPointZero inView:[piece superview]];
     }
+    
+}
+
+- (void)swipeUp:(id)sender
+{
     
 }
 
