@@ -116,6 +116,7 @@
         } else {
             annotationView.image = [UIImage imageNamed:@"tab-item-nearby.png"];
 //            annotationView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:@"NSData"]];
+            //Set pic on the annotation...
         }
         
         return annotationView;
@@ -129,8 +130,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)mapPressed:(id)sender {
-    
+- (IBAction)mapPressed:(id)sender
+{
     if (bottomViewDown) {
         [self openTimeline];
     } else {
