@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>923A88C8-A5FB-4AEE-B5DF-35D1C03C7CF5</string>
+	<string>01835B81-FB60-401E-86EE-85F7D0D94453</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Placebook</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>10693D2D-3B29-4363-B1EE-E187658C3F31</key>
-		<string>https://github.com/ithomaslin/Placebook</string>
+		<key>BCE47633-C6FA-47F3-BA5A-694CC91D7C8C</key>
+		<string>ssh://github.com/ithomaslin/Placebook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Placebook.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>10693D2D-3B29-4363-B1EE-E187658C3F31</key>
+		<key>BCE47633-C6FA-47F3-BA5A-694CC91D7C8C</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ithomaslin/Placebook</string>
+	<string>ssh://github.com/ithomaslin/Placebook.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>10693D2D-3B29-4363-B1EE-E187658C3F31</string>
+	<string>BCE47633-C6FA-47F3-BA5A-694CC91D7C8C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>10693D2D-3B29-4363-B1EE-E187658C3F31</string>
+			<string>BCE47633-C6FA-47F3-BA5A-694CC91D7C8C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Placebook</string>
 		</dict>

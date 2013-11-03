@@ -146,14 +146,7 @@
     }];
 }
 
-<<<<<<< HEAD
-
 - (IBAction)mapPressed:(id)sender {
-    
-=======
-- (IBAction)mapPressed:(id)sender
-{
->>>>>>> e4b0432f8993a140685ca0f5ebf2f9baa0efe6e0
     if (bottomViewDown) {
         [self openTimeline];
     } else {
