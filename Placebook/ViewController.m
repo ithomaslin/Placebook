@@ -37,8 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    bottomViewDown = YES;
+    bottomViewDown = YES; //Timeline view is hidden...
     
+    //Shadow for hot button...
     [_hotBtn.layer setShadowColor:[UIColor blackColor].CGColor];
     [_hotBtn.layer setShadowOpacity:1.0f];
     [_hotBtn.layer setShadowRadius:5.0f];
@@ -56,8 +57,8 @@
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    
     self.location = locations.lastObject;
-
     MKCoordinateRegion region;
     float latitude = self.location.coordinate.latitude;
     float longitude = self.location.coordinate.longitude;
@@ -73,12 +74,14 @@
     CLLocationCoordinate2D place;
     Annotation *ann;
     
+    //Hardcoded demo location pin...
     ann = [[Annotation alloc] initWithLatitude:53.482924 andLongitude:-2.200427];
     ann.coordinate = place;
     ann.title = @"Test";
     ann.name = @"ann";
     [places addObject:ann];
     
+    //User location...
     Annotation *selfAnnotation = [[Annotation alloc] initWithLatitude:self.location.coordinate.latitude andLongitude:self.location.coordinate.longitude];
     selfAnnotation.name = @"self";
     [_mapView removeAnnotations:_mapView.annotations];
@@ -129,55 +132,56 @@
 - (IBAction)mapPressed:(id)sender {
     
     if (bottomViewDown) {
-        [UIView animateWithDuration:0.5f
-                              delay:0.1f
-                            options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             [_mapView setFrame:CGRectMake(0, 0, _mapView.frame.size.width, 205)];
-                             [_bottomView setCenter:CGPointMake(160, 395)];
-                         } completion:^(BOOL finished){
-                             bottomViewDown = NO;
-                         }];
+        [self openTimeline];
     } else {
-        [UIView animateWithDuration:0.5f
-                              delay:0.1f
-                            options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             [_bottomView setCenter:CGPointMake(160, 710)];
-                             [_mapView setFrame:CGRectMake(0, 0, _mapView.frame.size.width, 520)];
-                         } completion:^(BOOL finished){
-                             bottomViewDown = YES;
-                         }];
+        [self closeTimeline];
     }
 }
 
+- (void)openTimeline
+{
+    [UIView animateWithDuration:0.5f
+                          delay:0.1f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [_mapView setFrame:CGRectMake(0, 0, _mapView.frame.size.width, 205)];
+                         [_bottomView setCenter:CGPointMake(160, 395)];
+                     } completion:^(BOOL finished){
+                         bottomViewDown = NO;
+                     }];
+}
 
+- (void)closeTimeline
+{
+    [UIView animateWithDuration:0.5f
+                          delay:0.1f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [_bottomView setCenter:CGPointMake(160, 710)];
+                         [_mapView setFrame:CGRectMake(0, 0, _mapView.frame.size.width, 520)];
+                     } completion:^(BOOL finished){
+                         bottomViewDown = YES;
+                     }];
+}
+
+- (void)showHotView
+{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"WhatsHotViewController"];
+    self.animationController = [[DropAnimationController alloc] init];
+    
+    controller.transitioningDelegate = self;
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
 - (IBAction)hotButton:(id)sender
 {
     if (!bottomViewDown) {
-        [UIView animateWithDuration:0.5f
-                              delay:0.1f
-                            options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             [_bottomView setCenter:CGPointMake(160, 710)];
-                             [_mapView setFrame:CGRectMake(0, 0, _mapView.frame.size.width, 520)];
-                         } completion:^(BOOL finished){
-                             bottomViewDown = YES;
-                         }];
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"WhatsHotViewController"];
-        self.animationController = [[DropAnimationController alloc] init];
-        
-        controller.transitioningDelegate = self;
-        [self presentViewController:controller animated:YES completion:nil];
+        [self closeTimeline];
+        [self showHotView];
+       
     } else {
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"WhatsHotViewController"];
-        self.animationController = [[DropAnimationController alloc] init];
-        
-        controller.transitioningDelegate = self;
-        [self presentViewController:controller animated:YES completion:nil];
+        [self showHotView];
     }
 }
 
@@ -206,19 +210,6 @@
     self.animationController.isPresenting = NO;
     
     return self.animationController;
-}
-
-- (void)closeTimeline:(TimelineViewController *)timelineViewController
-{
-    [UIView animateWithDuration:0.5f
-                          delay:0.1f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         [_bottomView setCenter:CGPointMake(160, 710)];
-                         [_mapView setFrame:CGRectMake(0, 0, _mapView.frame.size.width, 520)];
-                     } completion:^(BOOL finished){
-                         bottomViewDown = YES;
-    }];
 }
 
 - (void)didChooseHotPlace:(WhatsHotViewController *)whatshotVC{
