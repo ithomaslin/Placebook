@@ -43,20 +43,28 @@
     [NSURLConnection sendAsynchronousRequest:postRequest
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                               //                               NSString *output = [[NSString alloc] initWithData:data
-                               //                                                                        encoding:NSUTF8StringEncoding];
+                               NSString *output = [[NSString alloc] initWithData:data                                                                        encoding:NSUTF8StringEncoding];
                                
-                               NSArray *clusterObject = [NSJSONSerialization JSONObjectWithData: data
-                                                                                        options: NSJSONReadingMutableContainers
-                                                                                          error: &error];
-                               
-                               for (NSDictionary *clusterDict in clusterObject) {
-                                   SKCluster *cluster = [[SKCluster alloc] init];
-                                   cluster.center = CGPointMake([clusterDict[@"center"][@"lat"] floatValue], [clusterDict[@"center"][@"lon"] floatValue]);
-                                   cluster.count = [clusterDict[@"total"] integerValue];
-                                   [clusters addObject:cluster];
+                               NSLog(@"%@", output);
+                               if (data != nil) {
+                                   NSArray *clusterObject = [NSJSONSerialization JSONObjectWithData: data
+                                                                                            options: NSJSONReadingMutableContainers
+                                                                                              error: &error];
+                                   
+                                   @try {
+                                       for (NSDictionary *clusterDict in clusterObject) {
+                                           SKCluster *cluster = [[SKCluster alloc] init];
+                                           cluster.center = CGPointMake([clusterDict[@"center"][@"lat"] floatValue], [clusterDict[@"center"][@"lon"] floatValue]);
+                                           cluster.count = [clusterDict[@"total"] integerValue];
+                                           [clusters addObject:cluster];
+                                       }
+                                       completion(clusters);
+                                   }
+                                   @catch (NSException *exception)
+                                   {
+                                       NSLog(@"%@", exception);
+                                   }
                                }
-                               completion(clusters);
                            }];
 }
 

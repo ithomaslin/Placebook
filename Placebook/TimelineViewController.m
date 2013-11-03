@@ -8,6 +8,8 @@
 
 #import "TimelineViewController.h"
 #import "TimelineCell.h"
+#import "AFNetworking.h"
+#import "AFHTTPRequestOperation.h"
 
 @interface TimelineViewController ()
 
@@ -36,9 +38,6 @@
     [self.view addSubview:_activityIndicator];
     
     [_activityIndicator stopAnimating];
-    
-//    NSURL *baseURL = [NSURL URLWithString:@"string"];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,7 +73,13 @@
 {
     if ([[segue identifier] isEqualToString:@"TimelinePush"])
     {
-        NSLog(@"Hooray!!");
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        NSDictionary *parameters = @{@"foo": @"bar"};
+        [manager POST:@"http://54.217.128.103:3000/posts" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"JSON: %@", responseObject);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+        }];
     }
 }
 

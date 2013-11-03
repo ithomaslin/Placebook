@@ -48,6 +48,16 @@
                                             <segue destination="O6L-GY-noh" kind="embed" id="JTq-MP-5LK"/>
                                         </connections>
                                     </containerView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me4-dw-3ex">
+                                        <rect key="frame" x="20" y="6" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="cam">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="camLaunch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kAK-VB-vo5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -259,6 +269,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cam" width="22" height="18"/>
         <image name="close" width="22" height="22"/>
         <image name="details-item-shadow" width="320" height="127"/>
         <image name="hot" width="22" height="22"/>

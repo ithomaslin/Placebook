@@ -10,6 +10,12 @@
 		28BC6ADF1826108100ACBFBC /* PBServerConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6ADE1826108100ACBFBC /* PBServerConnector.m */; };
 		28BC6AE218261DC200ACBFBC /* SKCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6AE118261DC200ACBFBC /* SKCluster.m */; };
 		C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */; };
+		C40D67E018261F1700CF0CCD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40D67DF18261F1700CF0CCD /* AVFoundation.framework */; };
+		C40D67E218261F2100CF0CCD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40D67E118261F2100CF0CCD /* ImageIO.framework */; };
+		C40D67E518261F5300CF0CCD /* PBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E418261F5300CF0CCD /* PBAPI.m */; };
+		C40D67E618261F5300CF0CCD /* PBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E418261F5300CF0CCD /* PBAPI.m */; };
+		C40D67E91826223500CF0CCD /* PBCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E81826223500CF0CCD /* PBCaptureViewController.m */; };
+		C40D67EA1826223500CF0CCD /* PBCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D67E81826223500CF0CCD /* PBCaptureViewController.m */; };
 		C40FFAFD1825647D00E75793 /* DropAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFA1825647D00E75793 /* DropAnimationController.m */; };
 		C40FFAFE1825647D00E75793 /* ZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFAFC1825647D00E75793 /* ZoomAnimationController.m */; };
 		C40FFB011825677E00E75793 /* WhatsHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40FFB001825677E00E75793 /* WhatsHotViewController.m */; };
@@ -36,14 +42,8 @@
 		C4AFE12C182508C00003135A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFE12B182508C00003135A /* MapKit.framework */; };
 		C4AFE13018250A860003135A /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE12F18250A860003135A /* Annotation.m */; };
 		C4AFE13118250A860003135A /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE12F18250A860003135A /* Annotation.m */; };
-		C4AFE13918250AE90003135A /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13518250AE90003135A /* DataLoader.m */; };
-		C4AFE13A18250AE90003135A /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13518250AE90003135A /* DataLoader.m */; };
-		C4AFE13B18250AE90003135A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13818250AE90003135A /* Model.m */; };
-		C4AFE13C18250AE90003135A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE13818250AE90003135A /* Model.m */; };
 		C4AFE13F18250B810003135A /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AFE13E18250B810003135A /* Locations.plist */; };
 		C4AFE14018250B810003135A /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AFE13E18250B810003135A /* Locations.plist */; };
-		C4AFE14518251DC60003135A /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */; };
-		C4AFE14618251DC60003135A /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +63,12 @@
 		28BC6AE118261DC200ACBFBC /* SKCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCluster.m; sourceTree = "<group>"; };
 		C40D67B01825FB6F00CF0CCD /* TimelineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineDetailViewController.h; sourceTree = "<group>"; };
 		C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDetailViewController.m; sourceTree = "<group>"; };
+		C40D67DF18261F1700CF0CCD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C40D67E118261F2100CF0CCD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C40D67E318261F5300CF0CCD /* PBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAPI.h; sourceTree = "<group>"; };
+		C40D67E418261F5300CF0CCD /* PBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAPI.m; sourceTree = "<group>"; };
+		C40D67E71826223500CF0CCD /* PBCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PBCaptureViewController.h; path = ../PBCaptureViewController.h; sourceTree = "<group>"; };
+		C40D67E81826223500CF0CCD /* PBCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PBCaptureViewController.m; path = ../PBCaptureViewController.m; sourceTree = "<group>"; };
 		C40FFAF81825647D00E75793 /* ADVAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVAnimationController.h; sourceTree = "<group>"; };
 		C40FFAF91825647D00E75793 /* DropAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropAnimationController.h; sourceTree = "<group>"; };
 		C40FFAFA1825647D00E75793 /* DropAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropAnimationController.m; sourceTree = "<group>"; };
@@ -98,13 +104,7 @@
 		C4AFE12B182508C00003135A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C4AFE12E18250A860003135A /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		C4AFE12F18250A860003135A /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
-		C4AFE13418250AE90003135A /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
-		C4AFE13518250AE90003135A /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
-		C4AFE13718250AE90003135A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		C4AFE13818250AE90003135A /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		C4AFE13E18250B810003135A /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
-		C4AFE14318251DC60003135A /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
-		C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D67E218261F2100CF0CCD /* ImageIO.framework in Frameworks */,
+				C40D67E018261F1700CF0CCD /* AVFoundation.framework in Frameworks */,
 				C4AFE12C182508C00003135A /* MapKit.framework in Frameworks */,
 				C4AFE12A182508B90003135A /* QuartzCore.framework in Frameworks */,
 				C4AFE128182508B10003135A /* CoreImage.framework in Frameworks */,
@@ -177,6 +179,8 @@
 		C4AFE0F1182508520003135A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C40D67E118261F2100CF0CCD /* ImageIO.framework */,
+				C40D67DF18261F1700CF0CCD /* AVFoundation.framework */,
 				C4AFE12B182508C00003135A /* MapKit.framework */,
 				C4AFE129182508B90003135A /* QuartzCore.framework */,
 				C4AFE127182508B10003135A /* CoreImage.framework */,
@@ -193,13 +197,10 @@
 			children = (
 				28BC6ADC1826106800ACBFBC /* Server */,
 				C40FFAF71825647D00E75793 /* TransitionControllers */,
-				C4AFE13218250AE90003135A /* Repository */,
 				C4AFE12D18250A860003135A /* Annotation */,
 				C4AFE101182508520003135A /* AppDelegate.h */,
 				C4AFE102182508520003135A /* AppDelegate.m */,
 				C4AFE104182508520003135A /* Main.storyboard */,
-				C4AFE14318251DC60003135A /* WildcardGestureRecognizer.h */,
-				C4AFE14418251DC60003135A /* WildcardGestureRecognizer.m */,
 				C4AFE107182508520003135A /* ViewController.h */,
 				C4AFE108182508520003135A /* ViewController.m */,
 				28BC6AE018261DC200ACBFBC /* SKCluster.h */,
@@ -212,6 +213,10 @@
 				C40D67B11825FB6F00CF0CCD /* TimelineDetailViewController.m */,
 				C40FFAFF1825677E00E75793 /* WhatsHotViewController.h */,
 				C40FFB001825677E00E75793 /* WhatsHotViewController.m */,
+				C40D67E71826223500CF0CCD /* PBCaptureViewController.h */,
+				C40D67E81826223500CF0CCD /* PBCaptureViewController.m */,
+				C40D67E318261F5300CF0CCD /* PBAPI.h */,
+				C40D67E418261F5300CF0CCD /* PBAPI.m */,
 				C4AFE10A182508520003135A /* Images.xcassets */,
 				C4AFE0F9182508520003135A /* Supporting Files */,
 			);
@@ -255,33 +260,6 @@
 				C4AFE12F18250A860003135A /* Annotation.m */,
 			);
 			path = Annotation;
-			sourceTree = "<group>";
-		};
-		C4AFE13218250AE90003135A /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				C4AFE13318250AE90003135A /* DataLoader */,
-				C4AFE13618250AE90003135A /* Model */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		C4AFE13318250AE90003135A /* DataLoader */ = {
-			isa = PBXGroup;
-			children = (
-				C4AFE13418250AE90003135A /* DataLoader.h */,
-				C4AFE13518250AE90003135A /* DataLoader.m */,
-			);
-			path = DataLoader;
-			sourceTree = "<group>";
-		};
-		C4AFE13618250AE90003135A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C4AFE13718250AE90003135A /* Model.h */,
-				C4AFE13818250AE90003135A /* Model.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C4AFE13D18250B810003135A /* Data */ = {
@@ -394,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D67E91826223500CF0CCD /* PBCaptureViewController.m in Sources */,
 				C4AFE109182508520003135A /* ViewController.m in Sources */,
 				C4AFE14518251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
 				28BC6AE218261DC200ACBFBC /* SKCluster.m in Sources */,
@@ -402,12 +381,11 @@
 				28BC6ADF1826108100ACBFBC /* PBServerConnector.m in Sources */,
 				C4AFE103182508520003135A /* AppDelegate.m in Sources */,
 				C4AFE13018250A860003135A /* Annotation.m in Sources */,
-				C4AFE13B18250AE90003135A /* Model.m in Sources */,
 				C40FFAFD1825647D00E75793 /* DropAnimationController.m in Sources */,
 				C40D67B21825FB6F00CF0CCD /* TimelineDetailViewController.m in Sources */,
+				C40D67E518261F5300CF0CCD /* PBAPI.m in Sources */,
 				C46608EE1825DA1B00061499 /* TimelineCell.m in Sources */,
 				C4AFE0FF182508520003135A /* main.m in Sources */,
-				C4AFE13918250AE90003135A /* DataLoader.m in Sources */,
 				C477E0741825D75600E5C230 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,12 +394,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D67E618261F5300CF0CCD /* PBAPI.m in Sources */,
 				C4AFE13118250A860003135A /* Annotation.m in Sources */,
+				C40D67EA1826223500CF0CCD /* PBCaptureViewController.m in Sources */,
 				C4AFE11E182508520003135A /* PlacebookTests.m in Sources */,
-				C4AFE14618251DC60003135A /* WildcardGestureRecognizer.m in Sources */,
-				C4AFE13A18250AE90003135A /* DataLoader.m in Sources */,
 				C46608EF1825DA1B00061499 /* TimelineCell.m in Sources */,
-				C4AFE13C18250AE90003135A /* Model.m in Sources */,
 				C477E0751825D75600E5C230 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

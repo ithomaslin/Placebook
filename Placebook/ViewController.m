@@ -119,6 +119,7 @@
         } else {
             annotationView.image = [UIImage imageNamed:@"tab-item-nearby.png"];
 //            annotationView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:@"NSData"]];
+            //Set pic on the annotation...
         }
         
         return annotationView;
@@ -145,9 +146,14 @@
     }];
 }
 
+<<<<<<< HEAD
 
 - (IBAction)mapPressed:(id)sender {
     
+=======
+- (IBAction)mapPressed:(id)sender
+{
+>>>>>>> e4b0432f8993a140685ca0f5ebf2f9baa0efe6e0
     if (bottomViewDown) {
         [self openTimeline];
     } else {
@@ -213,6 +219,12 @@
     
     [_mapView setRegion:region animated:YES];
     [_mapView regionThatFits:region];
+}
+
+- (IBAction)camLaunch:(id)sender
+{
+    _captureViewController = [[PBCaptureViewController alloc] init];
+    [self presentViewController:_captureViewController animated:YES completion:nil];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
