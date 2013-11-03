@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09119A38-9EFA-4CA6-8675-CA30B089EB18</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Placebook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E0F08389-8E46-4441-AE27-81D6590A6610</key>
+		<string>https://github.com/ithomaslin/Placebook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Placebook.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E0F08389-8E46-4441-AE27-81D6590A6610</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ithomaslin/Placebook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E0F08389-8E46-4441-AE27-81D6590A6610</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E0F08389-8E46-4441-AE27-81D6590A6610</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Placebook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

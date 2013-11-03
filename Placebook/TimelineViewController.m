@@ -58,7 +58,8 @@
     TimelineCell *cell = (TimelineCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier
                                                                                forIndexPath:indexPath];
     
-    
+    NSInteger randomNumber = arc4random()%16;
+    cell.labelText.text = [NSString stringWithFormat:@"%ld", (long)randomNumber];
     return cell;
 }
 
