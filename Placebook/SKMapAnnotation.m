@@ -85,19 +85,35 @@
             
 //                        CGContextAddEllipseInRect(context, rect);
             [[UIColor darkGrayColor] setFill];
-            CGFloat badgeSize = 12;
+            CGFloat badgeSize = 14;
             CGRect badgeRect = CGRectMake(rect.size.width - badgeSize - 2, 0, badgeSize, badgeSize);
             
             CGContextFillEllipseInRect(context, badgeRect);
             
             NSString *count = [NSString stringWithFormat:@"%i", _cluster.count];
             
-            UIFont *font = [UIFont fontWithName: @"Courier" size: 10.0];
+            CGFloat vertShift = 1.0;
+            CGFloat hozShift = 0.0;
+            CGFloat fontSize = 10;
+            if (_cluster.count > 9)
+            {
+                fontSize = 8;
+                hozShift = 2.0;
+                vertShift = 2.0;
+            }
+            if (_cluster.count > 99)
+            {
+                fontSize = 6;
+                hozShift = 3.0;
+                vertShift = 3.0;
+            }
+            
+            UIFont *font = [UIFont fontWithName: @"Courier" size: fontSize];
             NSDictionary *dictionary = @{ NSFontAttributeName: font, NSForegroundColorAttributeName : [UIColor whiteColor]};
             
             CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
                                           
-            [count drawAtPoint:CGPointMake(CGRectGetMidX(badgeRect)-2.0, CGRectGetMinY(badgeRect)) withAttributes:dictionary];
+            [count drawAtPoint:CGPointMake(CGRectGetMidX(badgeRect)-2.0 - hozShift, CGRectGetMinY(badgeRect)+vertShift) withAttributes:dictionary];
         }
     }
     
