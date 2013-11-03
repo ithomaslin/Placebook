@@ -10,7 +10,7 @@
 
 @implementation PBAPI
 
-+ (BOOL) addPostWithLocation: (CLLocation *)location andImageData:(NSData *)imageData andMood:(NSNumber *)mood
++ (BOOL) addPostWithLocation: (CLLocation *)location andImageData:(NSData *)imageData andMood:(NSNumber *)mood callback:(void (^)(NSError *error))callbackBlock
 {
     NSMutableDictionary *locationDict = [[NSMutableDictionary alloc] init];
     [locationDict setObject:[NSNumber numberWithFloat:location.coordinate.latitude] forKey:@"lat"];
@@ -37,25 +37,20 @@
     [postRequest setHTTPMethod:@"PUT"];
     [postRequest setHTTPBody:jsonData];
 
-    //    NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-
-    // Send a synchronous request.
-    NSURLResponse * response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:postRequest
-                                         returningResponse:&response
-                                                     error:&error];
-
-    NSString *lol = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", lol);
-
-    NSLog(@".. HTTP done.");
-
-    if (error)
-    {
-        NSLog(@"error: %@", error);
-        return NO;
+    static NSOperationQueue *queue;
+    if (queue == nil) {
+        queue = [[NSOperationQueue alloc] init];
+        [queue setName:@"PBAPI NSURLRequest Queue"];
     }
-    
+
+    [NSURLConnection sendAsynchronousRequest:postRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSString *responseData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSInteger responseCode = [(NSHTTPURLResponse *) response statusCode];
+
+        NSLog(@"%@ %i", responseData, responseCode);
+        callbackBlock(connectionError);
+    }];
+
     return YES;
 }
 

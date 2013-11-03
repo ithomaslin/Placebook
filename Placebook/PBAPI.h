@@ -12,6 +12,6 @@
 
 @interface PBAPI : NSObject
 
-+ (BOOL) addPostWithLocation: (CLLocation *)location andImageData:(NSData *)imageData andMood:(NSNumber *)mood;
++ (BOOL) addPostWithLocation: (CLLocation *)location andImageData:(NSData *)imageData andMood:(NSNumber *)mood callback:(void (^)(NSError *error))callbackBlock;
 
 @end
