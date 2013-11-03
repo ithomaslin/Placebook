@@ -24,11 +24,12 @@
     _imageView = [[UIImageView alloc] initWithFrame:self.frame];
 //    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"]
 //                   placeholderImage:[UIImage imageNamed:@"pin.png"]];
-    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"] placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
+    [_imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"] placeholderImage:[UIImage imageNamed:@"self"] options:SDWebImageContinueInBackground completed:
      ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
          [self setNeedsDisplay];
     }];
     
+    _imageView.backgroundColor = [UIColor whiteColor];
 
 //    
 //    _imageView.image = [UIImage imageNamed:@"pin.png"];
@@ -51,7 +52,7 @@
     _cluster = cluster;
     self.frame = CGRectMake(0, 0, floor(kBaseSize * _cluster.relSize), floor(kBaseSize * _cluster.relSize));
     [_imageView setImageWithURL:[NSURL URLWithString:cluster.thumbs[0]]
-               placeholderImage:[UIImage imageNamed:@"placePin.png"] options:SDWebImageContinueInBackground completed:
+               placeholderImage:[UIImage imageNamed:@"self"] options:SDWebImageContinueInBackground completed:
      ^void (UIImage *image, NSError *error, SDImageCacheType cacheType) {
          [self setNeedsDisplay];
      }];

@@ -9,7 +9,7 @@
 #import "PBServerConnector.h"
 #import "SKCluster.h"
 
-#define kSizeProp 0.35
+#define kSizeProp 0.4
 
 @implementation PBServerConnector
 
