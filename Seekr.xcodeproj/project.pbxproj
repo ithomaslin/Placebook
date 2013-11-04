@@ -476,14 +476,14 @@
 				ORGANIZATIONNAME = AppCanvas;
 				TargetAttributes = {
 					C4AFE0EE182508520003135A = {
-						DevelopmentTeam = XGDS2S9G54;
+						DevelopmentTeam = RFX97Q94F8;
 					};
 					C4AFE10F182508520003135A = {
 						TestTargetID = C4AFE0EE182508520003135A;
 					};
 				};
 			};
-			buildConfigurationList = C4AFE0EA182508520003135A /* Build configuration list for PBXProject "Placebook" */;
+			buildConfigurationList = C4AFE0EA182508520003135A /* Build configuration list for PBXProject "Seekr" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -696,6 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Arnfeld (NB2L8PT3NW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Shaun/placebook/Placebook,
@@ -709,6 +710,7 @@
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -719,6 +721,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Arnfeld (NB2L8PT3NW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Shaun/placebook/Placebook,
@@ -732,6 +735,7 @@
 				INFOPLIST_FILE = "Placebook/Placebook-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -781,7 +785,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C4AFE0EA182508520003135A /* Build configuration list for PBXProject "Placebook" */ = {
+		C4AFE0EA182508520003135A /* Build configuration list for PBXProject "Seekr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4AFE11F182508520003135A /* Debug */,
